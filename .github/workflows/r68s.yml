@@ -222,7 +222,7 @@ jobs:
         
         🎉 编译版本：${{ env.DISTRIB_REVISION }}
         
-        🖥 管理地址：192.168.1.1 
+        🖥 管理地址： 192.168.1.1 或者 192.168.6.1
         
         🌴 名称：root
         
@@ -235,7 +235,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }} 电犀牛FastRhino-R68S-openwrt-固件下载
+        name: ${{ steps.tag.outputs.release_date }} 自动在线编译---电犀牛FastRhino-R68S-openwrt-固件下载
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
