@@ -1,5 +1,5 @@
 
-# OpenWrt-R66s
+# OpenWrt-R68s
 
 #### 基于OpenWrt-Actions-Lean自动化在线编译脚本  
 
