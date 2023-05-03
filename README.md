@@ -1,7 +1,7 @@
 
-# OpenWrt-R68s
+#        OpenWrt - R66S & R68S 固件
 
-#### 基于OpenWrt-Actions-Lean自动化在线编译脚本  
+####  基于OpenWrt-Actions-Lede自动化在线编译脚本  
 
  
 ![1](https://user-images.githubusercontent.com/83998087/215268469-993b739d-572a-4b74-827f-6b461ea22560.jpg)
