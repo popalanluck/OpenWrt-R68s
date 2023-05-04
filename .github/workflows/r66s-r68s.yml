@@ -34,7 +34,7 @@ env:
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
-  GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   TZ: Asia/Shanghai
 
 jobs:
@@ -233,9 +233,9 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: steps.tag.outputs.status == 'success' && !cancelled()
       env:
-        GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }}电犀牛R66S与R68S-OpenWrt（lede）固件
+        name: ${{ steps.tag.outputs.release_date }}-R66S与R68S固件-OpenWrt（lede）
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
@@ -253,4 +253,4 @@ jobs:
         keep_latest: 6        #保留多少个releases不删除
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
