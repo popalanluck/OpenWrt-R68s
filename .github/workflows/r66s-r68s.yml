@@ -9,8 +9,8 @@
 #
 
 name: 编译OpenWrt-r66s&r68s固件
-permissions:
-  contents: write
+
+
 
 on:
   repository_dispatch:
