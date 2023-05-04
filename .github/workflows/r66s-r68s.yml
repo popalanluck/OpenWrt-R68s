@@ -222,9 +222,9 @@ jobs:
         
         🎉 编译版本：${{ env.DISTRIB_REVISION }}
         
-        🖥 管理地址： 192.168.1.1 或者 192.168.6.1(请自行尝试)
+        🖥 管理地址： 192.168.1.1 或者 192.168.6.1   (请自行尝试)
         
-        🌴 名称：root
+        🌴 登录名称： root
         
         🛠 密码：password" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
@@ -235,7 +235,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }} 电犀牛R66S与R68S-OpenWrt固件下载
+        name: ${{ steps.tag.outputs.release_date }}电犀牛R66S与R68S-OpenWrt固件下载
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
