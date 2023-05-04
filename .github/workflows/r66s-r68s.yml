@@ -211,7 +211,9 @@ jobs:
         echo "release_date=$(date +"%Y.%m.%d.%H")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
+                        ★  此固件未经实际测试，仅供参考  ★ 
         **自动在线编译---电犀牛(fastrhino) R66S与R68S---OpenWrt(lede固件)**
+        
         ★ 源码 : https://github.com/coolsnowwolf/lede
         ★ 分支 : master
         ★ 感谢源码作者无私分享！
