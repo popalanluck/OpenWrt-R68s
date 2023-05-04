@@ -24,8 +24,6 @@ sed -i 's|bin/login|usr/libexec/login.sh|g' feeds/packages/utils/ttyd/files/ttyd
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
-echo 'src-git kiddin9 https://op.supes.top/packages/aarch64_cortex-a53' >>feeds.conf.default
-echo 'src-git istore_compat https://istore.linkease.com/repo/all/compat' >>feeds.conf.default
 
 
 # 添加第三方软件包
