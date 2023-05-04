@@ -208,7 +208,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y.%m.%d")-lede" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y.%m.%d")-lede-for-r66s&r68s" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
@@ -235,7 +235,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }} R66S与R68S-OpenWrt固件下载
+        name: ${{ steps.tag.outputs.release_date }} 电犀牛R66S与R68S-OpenWrt固件下载
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
