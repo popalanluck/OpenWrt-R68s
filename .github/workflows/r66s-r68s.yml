@@ -208,8 +208,8 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y.%m.%d")-OpenWrt-r66s&r68s" >> $GITHUB_OUTPUT
-        echo "release_date=$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y.%m.%d.%H")-OpenWrt-r66s&r68s" >> $GITHUB_OUTPUT
+        echo "release_date=$(date +"%Y.%m.%d.%H")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
         **自动在线编译---电犀牛(fastrhino) R66S与R68S---OpenWrt(lede固件)**
