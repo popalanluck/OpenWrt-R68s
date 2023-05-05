@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 编译OpenWrt-r66s&r68s固件
+name: 在线编译OpenWrt-r66s和r68s固件
 permissions:
   contents: write
 on:
@@ -254,7 +254,7 @@ jobs:
       uses: dev-drprasad/delete-older-releases@v0.2.1
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
-        keep_latest: 6        #保留多少个releases不删除
+        keep_latest: 16        #保留多少个releases不删除
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
