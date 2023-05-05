@@ -25,16 +25,18 @@ echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.defau
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 
-
 # 添加第三方软件包
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
+
+
+./scripts/feeds update -a
+./scripts/feeds install -a
 
 # 添加 istore应用商店
 echo >> feeds.conf.default
 echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
 ./scripts/feeds update istore
 ./scripts/feeds install -d y -p istore luci-app-store
-
 
 # nas-packages-luci
 
@@ -49,10 +51,6 @@ echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >
 svn export https://github.com/haiibo/packages/trunk/luci-app-onliner package/luci-app-onliner
 sed -i '/bin\/sh/a\uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
 sed -i '/nlbwmon/a\uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
-
-./scripts/feeds update -a
-./scripts/feeds install -a
-
 
 # 修改版本为编译日期
 date_version=$(date +"%y.%m.%d")
