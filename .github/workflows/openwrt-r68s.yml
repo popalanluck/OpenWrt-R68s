@@ -20,9 +20,9 @@ on:
         required: false
         default: 'false'
         
-# 定时触发编译(每隔7天，3点 开始编译)
- # schedule:
-  #  - cron: 3 3 */7 * *
+# 定时触发编译(每隔7天，4点 开始编译)
+  schedule:
+   - cron: 6 4 */7 * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
