@@ -20,7 +20,7 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwr
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
 
 ./scripts/feeds update -a
-./scripts/feeds install -a
+./scripts/feeds install -a -f
 
 # 添加 istore应用商店
 echo >> feeds.conf.default
