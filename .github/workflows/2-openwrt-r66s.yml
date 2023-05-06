@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 在线编译OpenWrt-r66s固件
+name: 在线编译---OpenWrt---r66s 固件
 permissions:
   contents: write
 on:
