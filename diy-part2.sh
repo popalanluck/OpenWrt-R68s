@@ -33,7 +33,7 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lea
 # 科学上网插件依赖
 
 #编译alist
-
+sudo apt install libfuse-dev
 rm -rf feeds/packages/lang/golang
 #旧版-svn20 svn export https://github.com/sbwml/packages_lang_golang/branches/20.x feeds/packages/lang/golang#
 #新版git-20 git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang#
