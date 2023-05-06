@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 在线编译OpenWrt-r68s固件
+name: 在线编译-OpenWrt-电犀牛r68s-固件
 permissions:
   contents: write
 on:
@@ -22,7 +22,7 @@ on:
         
 # 定时触发编译(每隔7天，3点 开始编译)
   schedule:
-    - cron: 16 3 */7 * *
+    - cron: 1 1 */7 * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -212,9 +212,9 @@ jobs:
         touch release.txt
         echo "
                         ★                  此固件未经实际测试，仅供参考                        ★ 
-                        ★  已经完全修改.config文件，所以2023.05.05 11：00 以后编译的固件与前面不同  ★
+           
                         
-        **自动在线编译---电犀牛(fastrhino) R68S---OpenWrt(lede固件)**
+        **  自动在线编译---OpenWrt(lede固件)---For---电犀牛(fastrhino) R68S  **
         
         ★ 源码 : https://github.com/coolsnowwolf/lede
         ★ 分支 : master
