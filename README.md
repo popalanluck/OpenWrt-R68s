@@ -1,5 +1,5 @@
 
-# OpenWrt(lede)-多种设备固件-在线编译
+#        OpenWrt(lede)-多种设备-在线编译固件
 
 # 目前包括： 电犀牛(fastrhino)- R66S 和 R68S 固件
 #           友善(friendlyarm)- nanopi-R5c 与 X86_64 固件
