@@ -20,7 +20,7 @@ on:
         required: false
         default: 'false'
         
-# 定时触发编译(每隔7天，凌晨1点 开始编译)
+# 定时触发编译(30日，16点开始编译)
   schedule:
     - cron: 14 16 30 * *
 
