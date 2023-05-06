@@ -31,3 +31,6 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lea
 
 
 # 科学上网插件依赖
+
+./scripts/feeds update -a
+./scripts/feeds install -a -f
