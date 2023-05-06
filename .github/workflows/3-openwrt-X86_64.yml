@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 03-在线编译-OpenWrt-X86_64固件
+name: 03-在线编译-OpenWrt-X86_64 固件
 permissions:
   contents: write
 on:
