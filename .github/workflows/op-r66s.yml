@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 在线编译OpenWrt-r66s和r68s固件
+name: 在线编译OpenWrt-r66s固件
 permissions:
   contents: write
 on:
@@ -21,14 +21,14 @@ on:
         default: 'false'
         
 # 定时触发编译(每隔7天，凌晨1点 开始编译)
-  #schedule:
-  #  - cron: 1 1 */7 * *
+  schedule:
+    - cron: 14 16 30 * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: config/r66s-r68s.config
+  CONFIG_FILE: config/r66s.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
@@ -207,14 +207,14 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y.%m.%d.%H")-OpenWrt-r66s&r68s" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y.%m.%d.%H")-r66s-OpenWrt" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y.%m.%d.%H")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
                         ★                  此固件未经实际测试，仅供参考                           ★ 
                         ★  已经完全修改.config文件，所以2023.05.05 11：00 以后编译的固件与前面不同  ★
                         
-        **自动在线编译---电犀牛(fastrhino) R66S与R68S---OpenWrt(lede固件)**
+        **自动在线编译---电犀牛(fastrhino) R66S---OpenWrt(lede固件)**
         
         ★ 源码 : https://github.com/coolsnowwolf/lede
         ★ 分支 : master
@@ -239,7 +239,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }}-R66S与R68S固件-OpenWrt（lede）
+        name: R${{ steps.tag.outputs.release_date }}-R66S固件-OpenWrt（lede）
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
@@ -247,14 +247,14 @@ jobs:
     - name: 删除运行记录
       uses: Mattraks/delete-workflow-runs@v2
       with:
-        retain_days: 6     #保留最后多少记录不删除
+        retain_days: 2     #保留最后多少记录不删除
         keep_minimum_runs: 0
 
     - name: 删除自动发布的旧固件
       uses: dev-drprasad/delete-older-releases@v0.2.1
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
-        keep_latest: 16        #保留多少个releases不删除
+        keep_latest: 2        #保留多少个releases不删除
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
