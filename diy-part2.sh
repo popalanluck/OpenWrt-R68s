@@ -32,12 +32,16 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lea
 
 # 科学上网插件依赖
 
-./scripts/feeds update -a
-./scripts/feeds install -a -f
-
 #编译alist
+
 rm -rf feeds/packages/lang/golang
-svn export https://github.com/sbwml/packages_lang_golang/branches/20.x feeds/packages/lang/golang
+#旧版 svn export https://github.com/sbwml/packages_lang_golang/branches/20.x feeds/packages/lang/golang#
+git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
 rm -rf package/feeds/kenzo/alist
 rm -rf package/feeds/kenzo/luci-app-alist
 git clone https://github.com/sbwml/luci-app-alist package/alist
+
+./scripts/feeds update -a
+./scripts/feeds install -a -f
+rm -rf package/feeds/kenzo/alist
+rm -rf package/feeds/kenzo/luci-app-alist
