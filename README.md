@@ -1,9 +1,9 @@
 
-#  OpenWrt(lede) - 电犀牛(fastrhino) - R66S 与 R68S 固件
+# OpenWrt(lede)-电犀牛(fastrhino)-R66S&R68S与X86_64固件
 
-####  基于OpenWrt-Actions-Lean自动化在线编译脚本  
+##  基于OpenWrt-Actions-Lean自动化在线编译脚本  
 
- 
+#参考图示：
 ![1](https://user-images.githubusercontent.com/83998087/215268469-993b739d-572a-4b74-827f-6b461ea22560.jpg)
 
 
