@@ -16,7 +16,7 @@ echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.de
 
 # 添加第三方软件包
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
-
+svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
