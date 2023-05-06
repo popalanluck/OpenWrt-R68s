@@ -51,7 +51,7 @@ sed -i "s/${orig_version}/R${date_version} by Alan/g" package/lean/default-setti
 sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/rockchip/Makefile
 
 # 修改默认IP
-# sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.66.1/g' package/base-files/files/bin/config_generate
 
 # TTYD 自动登录
 sed -i 's|bin/login|usr/libexec/login.sh|g' feeds/packages/utils/ttyd/files/ttyd.config
