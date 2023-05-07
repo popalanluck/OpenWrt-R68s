@@ -49,10 +49,12 @@ sed -i "s/${orig_version}/R${date_version} by Alan/g" package/lean/default-setti
 
 # 执行命令来切换内核
 sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/rockchip/Makefile
+sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/x86/Makefile
 
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
 
-# TTYD 自动登录
+# TTYD 不指定接口，同时实现自动登录
+sed -i 's/option interface/#option interface/g' feeds/packages/utils/ttyd/files/ttyd.config
 sed -i 's|bin/login|usr/libexec/login.sh|g' feeds/packages/utils/ttyd/files/ttyd.config
 
