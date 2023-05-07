@@ -9,6 +9,16 @@
 ##  基于OpenWrt-Actions-Lean自动化在线编译脚本  
 
 #参考图示：
+![image](https://user-images.githubusercontent.com/81753503/236657179-9fc25cc9-b0d3-48fe-bbb4-d4d390c93b00.png)
+![image](https://user-images.githubusercontent.com/81753503/236657194-19db7605-5f7e-430b-824e-2de99138e804.png)
+
+
+
+
+
+
+
+
 ![1](https://user-images.githubusercontent.com/83998087/215268469-993b739d-572a-4b74-827f-6b461ea22560.jpg)
 
 
