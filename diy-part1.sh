@@ -20,8 +20,7 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwr
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
 
 # Add cpufreq
-svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
-ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
+svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq package/feeds/luci/luci-app-cpufreq
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a -f
