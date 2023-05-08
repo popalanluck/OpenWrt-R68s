@@ -30,6 +30,7 @@ git clone https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/lu
 # 修改配置
 sed -i "s|'enabled'|enabled|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
 sed -i "s|'model'|model|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
+sed -i "s|'wizard'|'router'|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
 
 # 科学上网插件
 
