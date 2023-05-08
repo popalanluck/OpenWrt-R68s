@@ -18,6 +18,7 @@ echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.de
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
+git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 
 # 添加 cpufreq
 svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
@@ -40,6 +41,9 @@ echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >
 ./scripts/feeds update nas nas_luci
 ./scripts/feeds install -a -p nas
 ./scripts/feeds install -a -p nas_luci
+
+# x86 型号只显示 CPU 型号
+# sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
 
 # 在线用户
 svn export https://github.com/haiibo/packages/trunk/luci-app-onliner package/luci-app-onliner
