@@ -19,11 +19,12 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 #uci set network.wan.password='yourpassword'
 
 # 移除重复软件包
-# rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/themes/luci-theme-argon
 # rm -rf package/feeds/kenzo/luci-theme-argone
+rm -rf package/feeds/kenzo/luci-app-store
 
 # Themes
-# git clone https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon
 
 # 添加额外软件包
 
