@@ -207,7 +207,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=R$(date +"%Y.%m.%d.%H")-Nanopi-R5c-OpenWrt" >> $GITHUB_OUTPUT
+        echo "release_tag=R$(date +"%Y年%m月%d日%H时")-Nanopi-R5c-OpenWrt" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
@@ -240,7 +240,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: 友善Nanopi-R5c固件-${{ steps.tag.outputs.release_date }}
+        name: 友善(friendlyarm)-Nanopi-R5c固件-${{ steps.tag.outputs.release_date }}
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
