@@ -207,13 +207,13 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y.%m.%d.%H")-OpenWrt-R68s" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y年%m月%d日%H时")-OpenWrt-R68s" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
                         ★                  此固件未经实际测试，仅供参考                        ★
                           
-                          🎉 特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。🎉 
+                        🎉     特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。     🎉 
                                    
         ***  自动在线编译---OpenWrt(lede固件)---For---电犀牛(fastrhino) R68S  ***
         
@@ -221,15 +221,15 @@ jobs:
         ★ 分支 : master
         ★ 感谢源码作者无私分享！
         
-        ⏰ 编译时间：${{ env.FILE_TIME1 }}
+        ⏰   编译时间：${{ env.FILE_TIME1 }}
         
-        🎈 内核版本：${{ env.KERNEL_PATCHVER }}
+        🎈   内核版本：${{ env.KERNEL_PATCHVER }}
         
-        🎉 编译版本：${{ env.DISTRIB_REVISION }}
+        🎉   编译版本：${{ env.DISTRIB_REVISION }}
         
-        🖥  管理地址：  192.168.6.1  
+        🖥     管理地址：  192.168.6.1  
         
-        🌴   登录名称： root
+        🌴    登录名称： root
         
         🛠        密码：password" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
