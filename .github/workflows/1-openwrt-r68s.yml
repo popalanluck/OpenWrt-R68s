@@ -215,7 +215,7 @@ jobs:
                           
                         🎉     特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。     🎉 
                                    
-        ***  自动在线编译---OpenWrt(lede固件)---For---电犀牛(fastrhino) R68S  ***
+                       ***  自动在线编译---OpenWrt(lede固件)---For---电犀牛(fastrhino) R68S  ***
         
         ★ 源码 : https://github.com/coolsnowwolf/lede
         ★ 分支 : master
@@ -240,7 +240,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }}-R68S固件-OpenWrt（lede）
+        name: ${{ steps.tag.outputs.release_date }}【发布】-OpenWrt(lede)-电犀牛(fastrhino) R68S 固件
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
