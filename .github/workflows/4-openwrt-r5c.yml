@@ -240,7 +240,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: 友善(friendlyarm)-Nanopi-R5c固件-${{ steps.tag.outputs.release_date }}
+        name: ${{ steps.tag.outputs.release_date }}【发布】 友善(friendlyarm)- Nanopi-R5c 固件
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
