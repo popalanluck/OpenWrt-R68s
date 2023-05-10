@@ -215,8 +215,10 @@ jobs:
           
                    🎉  特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。  🎉
                         
-        **自动在线编译-OpenWrt-友善(friendlyarm)--Nanopi-R5c**
-                     编译无线网卡rtl8822ce-firmware
+                     **自动在线编译-OpenWrt-友善(friendlyarm)--Nanopi-R5c**
+                     
+                        编译无线网卡 rtl8822ce-firmware & kmod-rtw88
+                     
         ★ 源码 : https://github.com/coolsnowwolf/lede
         ★ 分支 : master
         ★ 感谢源码作者无私分享！
