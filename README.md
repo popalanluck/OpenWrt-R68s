@@ -7,6 +7,8 @@
 #           友善(friendlyarm)- nanopi-R5c 固件
 
 ##  基于OpenWrt-Actions-Lean自动化在线编译脚本  
+                                      [编译固件下载releases](https://github.com/popalanluck/OpenWrt-R68s/releases)
+                                     
 
 #固件参考图示：
 
@@ -30,3 +32,8 @@
 - [kenzok8](https://github.com/kenzok8/openwrt-packages)
 - [sirpdboy](https://github.com/sirpdboy/sirpdboy-package)
 - [istore](https://github.com/linkease/istore)
+
+                             
+                             
+                           
+
