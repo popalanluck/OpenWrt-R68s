@@ -240,7 +240,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: R${{ steps.tag.outputs.release_date }}【发布】-OpenWrt(lede)-电犀牛 R66S 固件
+        name: ${{ steps.tag.outputs.release_date }}【发布】-OpenWrt(lede)-电犀牛 R66S 固件
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
