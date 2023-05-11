@@ -207,7 +207,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y年%-m月%-d日%H时")-R66s-OpenWrt" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y%m%d%H")-R66s-OpenWrt" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y年%-m月%-d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
@@ -248,7 +248,7 @@ jobs:
     - name: 删除运行记录
       uses: Mattraks/delete-workflow-runs@v2
       with:
-        retain_days: 6     #保留最后多少记录不删除
+        retain_days: 3     #保留最后多少记录不删除
         keep_minimum_runs: 0
 
     - name: 删除自动发布的旧固件
