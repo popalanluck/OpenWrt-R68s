@@ -212,7 +212,7 @@ jobs:
         echo "release_date=$(date +"%Y年%-m月%-d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
-                        ★                  此固件未经实际测试，仅供参考                        ★ 
+                        ★       OpenWrt（lede)-X86_64-without_argone                   ★ 
                         
                             🎉 特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。🎉 
            
@@ -242,7 +242,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }}【发布】-OpenWrt（lede)-X86_64-without-argone主题
+        name: ${{ steps.tag.outputs.release_date }}【发布】-OpenWrt（lede)-X86_64-不含argone主题
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
