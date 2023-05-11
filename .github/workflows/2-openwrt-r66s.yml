@@ -207,7 +207,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y%m%d%H")-R66s-OpenWrt" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y年%m月%d日%H时")-R66s-OpenWrt" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y年%-m月%-d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
