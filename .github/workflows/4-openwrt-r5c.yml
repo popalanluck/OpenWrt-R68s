@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 04-在线编译-OpenWrt-友善nanopi-r5c固件
+name: 04-在线编译-OpenWrt-友善Nanopi-r5c固件
 permissions:
   contents: write
 on:
@@ -207,17 +207,18 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y年%-m月%-d日%H时")-Nanopi-R5c-OpenWrt" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y%m%d%H")-Nanopi-R5c-OpenWrt" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y年%-m月%-d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
-                   ★       此固件未经实际测试，仅供参考         ★
+                   ★        2023.05.11---某网友刷入TF卡，测试固件-启动成功                       ★
           
-                   🎉  特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。  🎉
+                         🎉  特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。  🎉
+                   ★      已经集成无线网卡驱动：rtl8822ce-firmware & kmod-rtw88 （无线功能未测试）            ★ 
                         
-                     **自动在线编译-OpenWrt-友善(friendlyarm)--Nanopi-R5c**
+                        
                      
-                        编译无线网卡 rtl8822ce-firmware & kmod-rtw88
+         **自动在线编译-OpenWrt-友善(friendlyarm)--Nanopi-R5c**            
                      
         ★ 源码 : https://github.com/coolsnowwolf/lede
         ★ 分支 : master
@@ -229,7 +230,7 @@ jobs:
         
         🎉 编译版本：${{ env.DISTRIB_REVISION }}
         
-        🖥  管理地址： 192.168.6.1 
+        🖥  管理地址：  192.168.6.1 
         
         🌴 登录名称：  root
         
@@ -250,7 +251,7 @@ jobs:
     - name: 删除运行记录
       uses: Mattraks/delete-workflow-runs@v2
       with:
-        retain_days: 6     #保留最后多少记录不删除
+        retain_days: 3     #保留最后多少记录不删除
         keep_minimum_runs: 0
 
     - name: 删除自动发布的旧固件
