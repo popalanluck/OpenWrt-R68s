@@ -19,6 +19,7 @@ echo 'src-git opentopd https://github.com/sirpdboy/sirpdboy-package' >>feeds.con
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
+svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/passwall2
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
 git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
