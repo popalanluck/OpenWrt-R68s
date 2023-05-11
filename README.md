@@ -4,7 +4,7 @@
 #                       目前包括：
 #           电犀牛(fastrhino)- R66S 和 R68S 固件
 #           X86_64 固件
-#           友善(friendlyarm)- nanopi-R5c 固件
+#           友善(friendlyarm)- Nanopi-R5c 固件
 
 ##  基于OpenWrt-Actions-Lean自动化在线编译脚本  
 
@@ -14,7 +14,8 @@
 #固件参考图示：
 
 
-![image](https://user-images.githubusercontent.com/81753503/236657179-9fc25cc9-b0d3-48fe-bbb4-d4d390c93b00.png)
+![image](https://github.com/popalanluck/OpenWrt-R68s/assets/81753503/f6d0f7d0-9244-4e39-9311-9feb790642cf)
+
 
 
 ![image](https://user-images.githubusercontent.com/81753503/236657194-19db7605-5f7e-430b-824e-2de99138e804.png)
