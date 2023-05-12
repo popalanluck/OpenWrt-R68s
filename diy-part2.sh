@@ -25,6 +25,10 @@ rm -rf feeds/luci/themes/luci-theme-argon
 # Themes
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon
 
+# 取消bootstrap为默认主题，将默认主题改为 argon
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+
+
 # 添加额外软件包
 
 
