@@ -12,8 +12,9 @@
 
 # 添加软件源
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 echo 'src-git opentopd https://github.com/sirpdboy/sirpdboy-package' >>feeds.conf.default
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+
 
 # 添加第三方软件包
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
@@ -22,7 +23,7 @@ svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-
 svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/passwall2
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
-git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
+# git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 
 # 添加 cpufreq
 svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
