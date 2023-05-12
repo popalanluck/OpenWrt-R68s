@@ -208,7 +208,7 @@ jobs:
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
         echo "release_tag=$(date +"%Y年%m月%d日%H时")-OpenWrt-Nanopi-R5c" >> $GITHUB_OUTPUT
-        echo "release_date=$(date +"%Y年%-m月%-d日%H时")" >> $GITHUB_OUTPUT
+        echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
                    ★        2023.05.11---某网友刷入TF卡，测试固件-启动成功                       ★
