@@ -236,7 +236,7 @@ jobs:
         🛠 密码：      password" >> release.txt
          echo 
          echo
-        【Xiaomi-R3G刷机方法】
+         💐Xiaomi-Router-3G刷机方法💐
                          1、开启ssh，备份原厂分区，刷入breed 1.2
                          2. 断电后按reset键不放，进breed 1.2 选择openwrt固件格式
                          3. 选择 kernel1 和 rootfs0 这两个文件，刷入后等待路由器自动重启。
