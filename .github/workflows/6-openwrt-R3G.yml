@@ -212,7 +212,7 @@ jobs:
         touch release.txt
         echo "
                             
-                         🎉  特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。  🎉
+                         🎉  iStore应用商店貌似不支持mipsle，无法安装应用  🎉
                  
                         
                         
