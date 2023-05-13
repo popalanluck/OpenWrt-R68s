@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 06-在线编译-OpenWrt-Xiaomi-R3G 固件
+name: 06-在线编译-OpenWrt-Xiaomi-Router-3G 固件
 permissions:
   contents: write
 on:
@@ -207,7 +207,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y年%m月%d日%H时")-OpenWrt-Xiaomi-R3G" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y%m%d%H")-OpenWrt-Xiaomi-Router-3G" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
@@ -217,7 +217,7 @@ jobs:
                         
                         
                      
-         **自动在线编译-OpenWrt-Xiaomi-R3G固件**            
+         **自动在线编译-OpenWrt-Xiaomi-Router-3G 固件**            
                      
         ★ 源码 : https://github.com/coolsnowwolf/lede
         ★ 分支 : master
@@ -251,7 +251,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }}【发布】Xiaomi-R3G固件
+        name: ${{ steps.tag.outputs.release_date }}【发布】Xiaomi-Router-3G 固件
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
