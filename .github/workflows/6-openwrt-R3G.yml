@@ -229,11 +229,20 @@ jobs:
         
         🎉 编译版本：${{ env.DISTRIB_REVISION }}
         
-        🖥  管理地址：  192.168.6.200
+        🖥  管理地址：  192.168.6.1
         
         🌴 登录名称：  root
         
         🛠 密码：      password" >> release.txt
+         echo 
+         echo
+        【Xiaomi-R3G刷机方法】
+                         1、开启ssh，备份原厂分区，刷入breed 1.2
+                         2. 断电后按reset键不放，进breed 1.2 选择openwrt固件格式
+                         3. 选择 kernel1 和 rootfs0 这两个文件，刷入后等待路由器自动重启。
+                         4. 耐心等待几分钟，期间本地链接可能会断开几次。 
+        
+        
         echo "status=success" >> $GITHUB_OUTPUT
     
     - name: 自动发布固件到 Releases
