@@ -29,6 +29,9 @@ git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-part
 svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
 ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
 
+# 添加 alist
+git clone https://github.com/sbwml/luci-app-alist package/alist
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a -f
 
