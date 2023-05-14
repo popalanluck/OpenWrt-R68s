@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 05-OpenWrt-X86-64-without-argone
+name: 06-OpenWrt-X86-64-alist
 permissions:
   contents: write
 on:
@@ -28,7 +28,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: config/X86_64-no-argone.config
+  CONFIG_FILE: config/x86-64-alist.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
@@ -89,7 +89,7 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-
+        
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
@@ -208,16 +208,16 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y%m%d%H")-OpenWrt-X86_64-without-argone" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y%m%d%H")-OpenWrt-X86_64-with-alist" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
-                        ★       OpenWrt（lede)-X86_64-without_argone                   ★ 
+                        ★       OpenWrt（lede)-X86_64-with-alist                  ★ 
                         
                             🎉 特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。🎉 
            
                         
-        **  在线编译固件---OpenWrt(lede)---For---X86_64  **
+        **  在线编译固件---OpenWrt(lede)---For---X86_64-alist  **
         
         ★ 源码 : https://github.com/coolsnowwolf/lede
         ★ 分支 : master
@@ -242,7 +242,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }}【发布】-OpenWrt（lede)-X86_64-不含argone主题
+        name: ${{ steps.tag.outputs.release_date }}-OpenWrt（lede)-X86-64-alist
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
