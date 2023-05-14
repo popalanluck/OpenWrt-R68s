@@ -20,9 +20,9 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 
 # 移除重复软件包
 # rm -rf package/feeds/kenzo/luci-theme-argone
+# rm -rf package/feeds/kiddin9/luci-base
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf package/feeds/kiddin9/luci-theme-argon
-rm -rf package/feeds/kiddin9/luci-base
 rm -rf package/feeds/kiddin9/firewall
 rm -rf package/feeds/kiddin9/firewall4
 rm -rf package/feeds/kiddin9/luci-app-apinger
@@ -44,6 +44,10 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 sed -i "s|'enabled'|enabled|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
 sed -i "s|'model'|model|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
 sed -i "s|'wizard'|'router'|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
+
+sed -i "s|'enabled'|enabled|g" package/feeds/kiddin9/luci-app-istorex/root/etc/config/istorex
+sed -i "s|'model'|model|g" package/feeds/kiddin9/luci-app-istorex/root/etc/config/istorex
+sed -i "s|'wizard'|'router'|g" package/feeds/kiddin9/luci-app-istorex/root/etc/config/istorex
 
 # 科学上网插件
 
