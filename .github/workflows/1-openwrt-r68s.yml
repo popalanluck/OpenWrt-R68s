@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 01-在线编译-OpenWrt-电犀牛-R68s 固件
+name: 01-OpenWrt-R68s
 permissions:
   contents: write
 on:
