@@ -239,8 +239,8 @@ jobs:
          echo
          echo "                 💐Xiaomi-Router-3G刷机方法💐
                          1、开启ssh，备份原厂分区，刷入breed 1.2
-                         2. 断电后按reset键不放，进breed 1.2 选择openwrt固件格式
-                         3. 选择 kernel1 和 rootfs0 这两个文件，刷入路由器。
+                         2. 断电后按reset键不放，进breed, 选择 闪存布局：小米 R3G OpenWrt 。
+                         3. 选择 kernel1 和 rootfs0 这两个文件，勾选“自动重启”，刷入路由器。
                          4. 重启路由器，耐心等待几分钟，期间本地链接可能会断开几次。 "
           echo
           echo
