@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 06-在线编译-OpenWrt-Xiaomi-Router-3G 固件
+name: 06-OpenWrt-Xiaomi-Router-3G
 permissions:
   contents: write
 on:
