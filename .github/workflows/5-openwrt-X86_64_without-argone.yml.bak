@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 05-在线编译-OpenWrt-X86_64固件-不含argone主题
+name: 05-OpenWrt-X86-64固件-without-argone
 permissions:
   contents: write
 on:
