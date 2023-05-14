@@ -19,8 +19,9 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 #uci set network.wan.password='yourpassword'
 
 # 移除重复软件包
-rm -rf feeds/luci/themes/luci-theme-argon
 # rm -rf package/feeds/kenzo/luci-theme-argone
+rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf package/feeds/kiddin9/luci-theme-argon
 rm -rf package/feeds/kiddin9/firewall
 rm -rf package/feeds/kiddin9/firewall4
 rm -rf package/feeds/kiddin9/luci-app-apinger
