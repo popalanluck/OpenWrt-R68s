@@ -22,6 +22,8 @@
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf package/feeds/kenzo/alist
 rm -rf package/feeds/kenzo/luci-app-alist
+rm -rf package/network/services/fullconenat
+git clone -b main --single-branch https://github.com/lxz1104/openwrt-fullconenat package/network/services/fullconenat
 
 # rm -rf package/feeds/kenzo/luci-theme-argone
 # rm -rf package/feeds/kiddin9/luci-base
