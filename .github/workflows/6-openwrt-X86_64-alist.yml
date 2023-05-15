@@ -90,6 +90,16 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
         
+    - name: 增加alist
+      run: |
+        [ -e files ] && mv files openwrt/files
+        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        cd openwrt
+        rm -rf feeds/packages/lang/golang
+        svn export https://github.com/sbwml/packages_lang_golang/branches/19.x feeds/packages/lang/golang
+        git clone https://github.com/sbwml/luci-app-alist package/alist
+   
+        
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
