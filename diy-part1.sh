@@ -11,28 +11,34 @@
 # =================================================================
 
 # 添加软件源
-# echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-# echo 'src-git opentopd https://github.com/sirpdboy/sirpdboy-package' >>feeds.conf.default
-# echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+echo 'src-git opentopd https://github.com/sirpdboy/sirpdboy-package' >>feeds.conf.default
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 
 
 # 添加第三方软件包
-git clone https://github.com/kiddin9/openwrt-packages package/feeds/kiddin9
-git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
-
+# git clone https://github.com/kiddin9/openwrt-packages package/feeds/kiddin9
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
-# svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
-# svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/passwall2
-# git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 # git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
+
+svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
+svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/passwall2
+git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
+svn export https://github.com/kiddin9/openwrt-packages/branches/master/fullconenat package/fullconenat
+svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-fullconenat  package/luci-app-fullconenat
+svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-ssr-plus  package/luci-app-ssr-plus
+svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-wan-mac package/luci-app-wan-mac
+svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-theme-alpha package/luci-theme-alpha
 
 # 添加 cpufreq
 svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
 ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
 
 # 添加 alist
-# git clone https://github.com/sbwml/luci-app-alist package/alist
+svn export https://github.com/kiddin9/openwrt-packages/branches/master/alist package/alist
+svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-alist  package/luci-app-alist
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a -f
