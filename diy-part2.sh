@@ -20,6 +20,8 @@
 
 # 移除重复软件包
 rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf package/feeds/kenzo/alist
+# rm -rf package/feeds/kenzo/luci-app-alist
 
 # rm -rf package/feeds/kenzo/luci-theme-argone
 # rm -rf package/feeds/kiddin9/luci-base
