@@ -92,8 +92,6 @@ jobs:
         
     - name: 增加alist
       run: |
-        [ -e files ] && mv files openwrt/files
-        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         cd openwrt
         rm -rf feeds/packages/lang/golang
         rm -rf package/alist
