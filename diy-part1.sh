@@ -27,10 +27,10 @@ svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
 
-git clone -b main --single-branch https://github.com/lxz1104/openwrt-fullconenat package/fullconenat
+# git clone -b main --single-branch https://github.com/lxz1104/openwrt-fullconenat package/fullconenat
 # git clone https://github.com/sbwml/fullconenat package/fullconenat
+# git clone https://github.com/peter-tank/luci-app-fullconenat package/luci-app-fullconenat
 
-git clone https://github.com/peter-tank/luci-app-fullconenat package/luci-app-fullconenat
 svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-ssr-plus  package/luci-app-ssr-plus
 svn export https://github.com/kiddin9/openwrt-packages/branches/master/lua-neturl package/lua-neturl
 svn export https://github.com/kiddin9/openwrt-packages/branches/master/redsocks2 package/redsocks2
