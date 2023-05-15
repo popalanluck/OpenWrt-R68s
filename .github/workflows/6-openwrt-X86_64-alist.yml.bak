@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 06-OpenWrt-X86-64-alist
+name: 06-OpenWrt-X86-64-alist-error
 permissions:
   contents: write
 on:
@@ -221,7 +221,7 @@ jobs:
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
-                        ★       OpenWrt（lede)-X86_64-with-alist                  ★ 
+                        ★       OpenWrt（lede)-X86_64-with-alist  *（alist编译失败）*                  ★ 
                         
                             🎉 特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。🎉 
            
