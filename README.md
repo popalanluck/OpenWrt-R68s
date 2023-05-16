@@ -1,10 +1,10 @@
 
-#  OpenWrt(lede)-多种设备-在线编译固件
+#                 OpenWrt(lede)-多种设备-在线编译固件
 
-#                       目前包括：
+#                       当前编译型号：
 #           电犀牛(fastrhino)- R66S 和 R68S 固件
-#           X86_64 固件
 #           友善(friendlyarm)- Nanopi-R5c 固件
+#           X86_64 固件
 #           小米(Xiaomi)-R3G 固件
 
 ##  基于OpenWrt-Actions-Lean自动化在线编译脚本  
