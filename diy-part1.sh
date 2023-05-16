@@ -35,16 +35,16 @@ svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-
 svn export https://github.com/kiddin9/openwrt-packages/branches/master/lua-neturl package/lua-neturl
 svn export https://github.com/kiddin9/openwrt-packages/branches/master/redsocks2 package/redsocks2
 svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-wan-mac package/luci-app-wan-mac
-svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-theme-alpha package/luci-theme-alpha
 
+# svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-theme-alpha package/luci-theme-alpha
 
 # 添加 cpufreq
 svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
 ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
 
 # 添加 alist
-svn export https://github.com/kiddin9/openwrt-packages/branches/master/alist package/alist
-svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-alist  package/luci-app-alist
+# svn export https://github.com/kiddin9/openwrt-packages/branches/master/alist package/alist
+# svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-alist  package/luci-app-alist
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a -f
