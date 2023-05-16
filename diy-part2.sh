@@ -61,3 +61,4 @@ sed -i "s|'wizard'|'router'|g" package/feeds/nas_luci/luci-app-istorex/root/etc/
 
 # 删除编译出错的无用补丁
 rm -rf target/linux/rockchip/patches-6.1/113-ethernet-stmicro-stmmac-Add-SGMII-QSGMII-support.patch
+rm -rf target/linux/generic/backport-5.15/430-v6.3-ubi-Fix-failure-attaching-when-vid_hdr-offset-equals.patch
