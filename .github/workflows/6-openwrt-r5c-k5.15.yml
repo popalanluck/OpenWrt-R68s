@@ -219,7 +219,7 @@ jobs:
         
                                                 
                    ★      已经集成无线网卡驱动：rtl8822ce-firmware & kmod-rtw88 （无线功能未测试）            ★ 
-                                                  ★测试增加 MT7916网卡驱动   ★
+                                            ★5.15内核固件---测试增加 MT7916 & MT7921 网卡驱动   ★
                         
                      
          **自动在线编译-OpenWrt-友善(friendlyarm)--Nanopi-R5c-内核K5.15**            
