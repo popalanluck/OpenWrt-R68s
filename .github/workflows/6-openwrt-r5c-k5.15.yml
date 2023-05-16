@@ -103,6 +103,7 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         rm -rf target/linux/generic/backport-5.15/430-v6.3-ubi-Fix-failure-attaching-when-vid_hdr-offset-equals.patch
+        sed -i 's/PATCHVER:=6.1/PATCHVER:=5.15/g' target/linux/rockchip/Makefile
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH connection to Actions
