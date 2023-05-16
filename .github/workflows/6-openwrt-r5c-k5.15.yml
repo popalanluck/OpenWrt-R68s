@@ -89,7 +89,7 @@ jobs:
         chmod +x $DIY_P1_SH
         chmod 777 diy-r5c-k5.15.sh
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P1_SH
+        $GITHUB_WORKSPACE/diy-r5c-k5.15.sh
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
