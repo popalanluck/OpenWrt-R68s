@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 04-OpenWrt-Nanopi-R5c
+name: 04-OpenWrt-Nanopi-R5c-K6.1
 permissions:
   contents: write
 on:
