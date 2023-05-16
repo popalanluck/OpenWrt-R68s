@@ -213,6 +213,7 @@ jobs:
         touch release.txt
         echo "
                         ★                  此固件未经实际测试，仅供参考                        ★ 
+                        ★                  尝试增加 MT7921 和 RTL8822CE 无线网卡驱动          ★
                         
                             🎉 特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。🎉 
            
