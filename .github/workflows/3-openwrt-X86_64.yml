@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 03-OpenWrt-X86-64
+name: 03-OpenWrt-X86_64
 permissions:
   contents: write
 on:
@@ -208,7 +208,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y%m%d%H")-OpenWrt-X86-64" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y%m%d%H")-OpenWrt-X86_64" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
