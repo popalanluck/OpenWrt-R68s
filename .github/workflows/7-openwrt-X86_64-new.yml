@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 07-OpenWrt-X86_64-new
+name: 07-OpenWrt-X86_64-K6.1-new
 permissions:
   contents: write
 on:
