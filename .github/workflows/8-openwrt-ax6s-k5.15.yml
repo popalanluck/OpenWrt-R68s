@@ -213,7 +213,7 @@ jobs:
         touch release.txt
         echo "
                    
-          
+                          🍎  本固件已经集成istore 应用商店,可安装istore里面的大部分应用。🍎
                          🎉  特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。  🎉
         
                                                 
