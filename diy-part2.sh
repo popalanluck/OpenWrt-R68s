@@ -50,6 +50,10 @@ sed -i "s|'enabled'|enabled|g" package/feeds/nas_luci/luci-app-istorex/root/etc/
 sed -i "s|'model'|model|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
 sed -i "s|'wizard'|'router'|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
 
+# disable bridge firewalling for docker
+sed -i 's/ip6tables=1/ip6tables=0/g' feeds/packages/utils/dockerd/files/etc/sysctl.d/sysctl-br-netfilter-ip.conf
+sed -i 's/iptables=1/iptables=0/g' feeds/packages/utils/dockerd/files/etc/sysctl.d/sysctl-br-netfilter-ip.conf
+
 # sed -i "s|'enabled'|enabled|g" package/feeds/kiddin9/luci-app-istorex/root/etc/config/istorex
 # sed -i "s|'model'|model|g" package/feeds/kiddin9/luci-app-istorex/root/etc/config/istorex
 # sed -i "s|'wizard'|'router'|g" package/feeds/kiddin9/luci-app-istorex/root/etc/config/istorex
