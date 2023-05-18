@@ -216,10 +216,12 @@ jobs:
                    
           
                          🎉  特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。  🎉
+                        🍎  本固件已经集成istore应用商店与Docker,可安装istore内的大部分应用。🍎
         
                                                 
                    ★      已经集成无线网卡驱动：rtl8822ce-firmware & kmod-rtw88 （无线功能未测试）            ★ 
-                                            ★5.15内核固件---测试增加 MT7916 & MT7921 网卡驱动   ★
+                             
+                             ★5.15内核固件---测试增加 MT7916 & MT7921 网卡驱动   ★
                         
                      
          **自动在线编译-OpenWrt-友善(friendlyarm)--Nanopi-R5c-内核K5.15**            
