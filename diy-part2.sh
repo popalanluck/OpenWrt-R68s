@@ -51,6 +51,8 @@ sed -i "s|'model'|model|g" package/feeds/nas_luci/luci-app-istorex/root/etc/conf
 sed -i "s|'wizard'|'router'|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
 
 # disable bridge firewalling for docker
+echo 'net.bridge.bridge-nf-call-ip6tables=0' >>package/base-files/files/etc/sysctl.conf
+echo 'net.bridge.bridge-nf-call-iptables=0' >>package/base-files/files/etc/sysctl.conf
 sed -i 's/ip6tables=1/ip6tables=0/g' feeds/packages/utils/dockerd/files/etc/sysctl.d/sysctl-br-netfilter-ip.conf
 sed -i 's/iptables=1/iptables=0/g' feeds/packages/utils/dockerd/files/etc/sysctl.d/sysctl-br-netfilter-ip.conf
 
