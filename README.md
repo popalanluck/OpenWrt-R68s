@@ -5,7 +5,8 @@
 #           电犀牛(fastrhino)- R66S 和 R68S 固件
 #           友善(friendlyarm)- Nanopi-R5c 固件
 #           X86_64 固件
-#           小米(Xiaomi)-R3G 固件
+#           小米(Xiaomi)-Router-3G 固件
+#           红米(Redmi)-AX6S 固件
 
 ##  基于OpenWrt-Actions-Lean自动化在线编译脚本  
 
