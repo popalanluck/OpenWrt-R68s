@@ -20,9 +20,9 @@ on:
         required: false
         default: 'false'
         
-# 定时触发编译 (每月1日16点 开始编译)
+# 定时触发编译 (每隔7日，16点 开始编译)
   schedule:
-   - cron: 16 16 1 * *
+   - cron: 16 16 */7 * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -214,7 +214,7 @@ jobs:
         echo "
                         ★                     此固件未经实际测试，仅供参考                     ★ 
                         
-                        ★                  尝试增加 MT7921 和 RTL8822CE 无线网卡驱动          ★
+                        ★     尝试增加intel 7265/8265 & MT7921 和 RTL8822CE 无线网卡驱动       ★
                         
                            🍎  本固件已经集成istore应用商店与Docker,可安装istore内的大部分应用。🍎
                            
