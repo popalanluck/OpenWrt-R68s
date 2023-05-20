@@ -215,8 +215,8 @@ jobs:
                                                   
                                                         🍎  本固件为AX6S刷Openwrt----专用factory镜像🍎
 														
-           
-	         🍎 注意：千万不要刷另一个releases里生成的factory固件，那个体积太大，会导致刷机失败。AX6S--请刷小于30Mb的factory固件🍎
+        
+		🍎 注意：千万不要刷另一个releases里生成的factory固件，那个体积太大，会导致刷机失败。AX6S--请刷小于30Mb的factory固件🍎
 
                                                       
                                       
