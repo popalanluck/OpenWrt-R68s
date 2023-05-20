@@ -22,14 +22,6 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 
-# 添加额外软件包
-
-
-# 修改配置
-sed -i "s|'enabled'|enabled|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
-sed -i "s|'model'|model|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
-sed -i "s|'wizard'|'router'|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
-
 # Disable bridge firewalling by default
 echo '# Disable bridge firewalling by default' >>package/base-files/files/etc/sysctl.conf
 echo 'net.bridge.bridge-nf-call-arptables=0' >>package/base-files/files/etc/sysctl.conf
@@ -40,11 +32,6 @@ echo 'net.bridge.bridge-nf-call-iptables=0' >>package/base-files/files/etc/sysct
 sed -i 's/ip6tables=1/ip6tables=0/g' feeds/packages/utils/dockerd/files/etc/sysctl.d/sysctl-br-netfilter-ip.conf
 sed -i 's/iptables=1/iptables=0/g' feeds/packages/utils/dockerd/files/etc/sysctl.d/sysctl-br-netfilter-ip.conf
 
-
-# 科学上网插件
-
-
-# 科学上网插件依赖
 
 # 删除编译出错的无用补丁
 
