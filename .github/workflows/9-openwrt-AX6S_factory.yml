@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 09-OpenWrt-Redmi-AX6S-factory
+name: 09-OpenWrt-Redmi-AX6S_Factory
 permissions:
   contents: write
 on:
@@ -28,7 +28,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: config/ax6s-factory.config
+  CONFIG_FILE: config/ax6s.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
@@ -207,17 +207,19 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y%m%d%H")-OpenWrt-Redmi-AX6S-Factory" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y%m%d%H")-OpenWrt-Redmi-AX6S_Factory" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
                    
-                                                  
-                 本固件为AX6S刷Openwrt----专用factory镜像
-							
-	注意：千万不要刷另一个releases里生成的factory固件，那个体积太大，会导致刷机失败。AX6S--请刷小于30Mb的factory固件
+                          🍎  AX6S刷Openwrt专用--factory镜像文件🍎
 
-         **自动在线编译-OpenWrt-Redmi-AX6S-专用factory镜像**            
+                    
+        
+                                                
+                                      
+                     
+         **自动在线编译-OpenWrt-Redmi-AX6S-factory**            
                      
         ★ 源码 : https://github.com/coolsnowwolf/lede
         ★ 分支 : master
@@ -242,7 +244,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }}【发布】OpenWrt-ax6s-专用factory镜像
+        name: ${{ steps.tag.outputs.release_date }}【发布】OpenWrt-ax6s-factory固件
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
