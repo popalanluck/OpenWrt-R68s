@@ -59,3 +59,7 @@ sed -i 's/192.168.1.1/192.168.6.200/g' package/base-files/files/bin/config_gener
 sed -i 's/option interface/#option interface/g' feeds/packages/utils/ttyd/files/ttyd.config
 sed -i 's|bin/login|usr/libexec/login.sh|g' feeds/packages/utils/ttyd/files/ttyd.config
 
+# 修改配置
+sed -i "s|'enabled'|enabled|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
+sed -i "s|'model'|model|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
+sed -i "s|'wizard'|'router'|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
