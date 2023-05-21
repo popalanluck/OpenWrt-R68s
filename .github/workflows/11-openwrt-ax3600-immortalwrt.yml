@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 11-OpenWrt-AX3600-immortalwrt
+name: 11-immortalwrt-AX3600
 permissions:
   contents: write
 on:
@@ -20,9 +20,9 @@ on:
         required: false
         default: 'false'
         
-# 定时触发编译(每隔7天，3点 开始编译)
+# 定时触发编译(每隔10天，6点 开始编译)
   schedule:
-   - cron: 16 3 */7 * *
+   - cron: 16 6 */10 * *
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
@@ -88,8 +88,6 @@ jobs:
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
-        rm -rf target/linux/ipq807x
-        svn export https://github.com/immortalwrt/immortalwrt/branches/master/target/linux/ipq807x target/linux/ipq807x
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
@@ -213,7 +211,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y%m%d%H")-OpenWrt-AX3600" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y%m%d%H")-immortalwrt-AX3600" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
@@ -223,9 +221,9 @@ jobs:
                          
                         🎉     特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。     🎉 
                                    
-                       ***  自动在线编译---OpenWrt(lede固件)---For--Xiaomi-AX3600  ***
+                       ***  自动在线编译---OpenWrt(immortalwrt固件)---For--Xiaomi-AX3600  ***
         
-        ★ 源码 : https://github.com/coolsnowwolf/lede
+        ★ 源码 : https://github.com/immortalwrt/immortalwrt
         ★ 分支 : master
         ★ 感谢源码作者无私分享！
         
@@ -248,7 +246,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }}【发布】-OpenWrt(lede)-Xiaomi-AX3600 固件
+        name: ${{ steps.tag.outputs.release_date }}【发布】-immortalwrt-Xiaomi-AX3600 固件
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
