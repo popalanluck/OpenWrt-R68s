@@ -217,7 +217,7 @@ jobs:
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
-                        ★                  此固件未经实际测试，仅供参考                        ★
+                        ★          注意： AX3600 必须刷Uboot与大分区文件，才能使用此固件     ★
                          
                          🍎  本固件已经集成istore应用商店与Docker,可安装istore内的大部分应用。🍎
                          
