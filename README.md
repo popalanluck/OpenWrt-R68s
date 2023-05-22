@@ -1,8 +1,8 @@
 
-#                 OpenWrt(lede)-在线编译固件
+#                   Immortalwrt-在线编译固件
 
 #                       当前编译型号：
-#                    红米(Redmi)-AX6S 固件
+#                   Immortalwrt-ax3600 固件
 
 ##  基于OpenWrt-Actions-Lean自动化在线编译脚本  
 
