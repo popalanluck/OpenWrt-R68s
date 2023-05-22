@@ -90,6 +90,9 @@ jobs:
         cd openwrt
         rm -rf target/linux/ipq807x
         svn export https://github.com/immortalwrt/immortalwrt/branches/master/target/linux/ipq807x target/linux/ipq807x
+        svn export https://github.com/coolsnowwolf/lede/branches/master/target/linux/ipq807x/files-5.10 target/linux/ipq807x/files-5.10
+        svn export https://github.com/coolsnowwolf/lede/tree/master/target/linux/ipq807x/patches-5.10 target/linux/ipq807x/patches-5.10
+        svn export https://github.com/coolsnowwolf/lede/tree/master/target/linux/ipq807x/config-5.10 target/linux/ipq807x/config-5.10        
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
