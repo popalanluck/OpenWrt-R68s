@@ -11,9 +11,9 @@
 # =================================================================
 
 # 添加软件源
-echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 echo 'src-git opentopd https://github.com/sirpdboy/sirpdboy-package' >>feeds.conf.default
-echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+#echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 
 
 # 添加第三方软件包
@@ -22,18 +22,18 @@ echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.de
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 # git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 
- svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
- svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/passwall2
+# svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
+# svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/passwall2
  git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
- git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
+# git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
 
 # git clone -b main --single-branch https://github.com/lxz1104/openwrt-fullconenat package/fullconenat
 # git clone https://github.com/sbwml/fullconenat package/fullconenat
 # git clone https://github.com/peter-tank/luci-app-fullconenat package/luci-app-fullconenat
 
-svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-ssr-plus  package/luci-app-ssr-plus
-svn export https://github.com/kiddin9/openwrt-packages/branches/master/lua-neturl package/lua-neturl
-svn export https://github.com/kiddin9/openwrt-packages/branches/master/redsocks2 package/redsocks2
+# svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-ssr-plus  package/luci-app-ssr-plus
+# svn export https://github.com/kiddin9/openwrt-packages/branches/master/lua-neturl package/lua-neturl
+# svn export https://github.com/kiddin9/openwrt-packages/branches/master/redsocks2 package/redsocks2
 svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-wan-mac package/luci-app-wan-mac
 
 # svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-theme-alpha package/luci-theme-alpha
@@ -73,13 +73,13 @@ sed -i '/bin\/sh/a\uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean
 sed -i '/nlbwmon/a\uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
 
 # 修改版本为编译日期
-date_version=$(date +"%y.%-m.%-d")
-orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
-sed -i "s/${orig_version}/R${date_version} by Alan/g" package/lean/default-settings/files/zzz-default-settings
+#date_version=$(date +"%y.%-m.%-d")
+#orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
+#sed -i "s/${orig_version}/R${date_version} by Alan/g" package/lean/default-settings/files/zzz-default-settings
 
 # 执行命令来切换内核
-sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/rockchip/Makefile
-sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/x86/Makefile
+#sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/rockchip/Makefile
+#sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/x86/Makefile
 
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
