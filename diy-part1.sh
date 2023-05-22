@@ -78,7 +78,7 @@ orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | 
 sed -i "s/${orig_version}/R${date_version} by Alan/g" package/lean/default-settings/files/zzz-default-settings
 
 # 执行命令来切换内核
-sed -i 's/PATCHVER:=5.15/PATCHVER:=5.4/g' target/linux/rockchip/Makefile
+sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/rockchip/Makefile
 sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/x86/Makefile
 sed -i 's/PATCHVER:=5.15/PATCHVER:=5.10/g' target/linux/ipq807x/Makefile
 
