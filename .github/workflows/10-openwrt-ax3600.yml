@@ -222,7 +222,7 @@ jobs:
         echo "
                         ★          注意： AX3600 必须刷Uboot与大分区文件，才能使用此固件     ★
                          
-                         🍎  本固件已经集成istore应用商店与Docker,可安装istore内的大部分应用。🍎
+                         🍎  本固件已经集成istore应用商店,可安装istore内的大部分应用。🍎
                          
                         🎉     特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。     🎉 
                                    
