@@ -50,10 +50,10 @@ jobs:
         sudo timedatectl set-timezone "$TZ"         
     
     - name: 删除运行记录
-      uses: Mattraks/delete-workflow-runs@v2
+      uses: Mattraks/delete-workflow-runs@main
       with:
-        retain_days: 21     #保留最后多少记录不删除
-        keep_minimum_runs: 1   
+        retain_days: 1     #保留最后多少记录不删除
+        keep_minimum_runs: 3   
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
