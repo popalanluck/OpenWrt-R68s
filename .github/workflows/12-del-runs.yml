@@ -47,12 +47,7 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
-        sudo timedatectl set-timezone "$TZ"
-        sudo mkdir -p /workdir
-        sudo chown $USER:$GROUPS /workdir      
-
-         
+        sudo timedatectl set-timezone "$TZ"         
     
     - name: 删除运行记录
       uses: Mattraks/delete-workflow-runs@v2
