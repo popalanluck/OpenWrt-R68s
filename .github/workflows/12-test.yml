@@ -64,14 +64,7 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
 
-    - name: 下载源代码
-      working-directory: /workdir
-      run: |
-        df -hT $PWD
-        git clone $REPO_URL -b $REPO_BRANCH openwrt
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-
-    
+       
 
      
 
@@ -83,38 +76,9 @@ jobs:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}    
  
 
-   
-
     
 
-    - name: 生成发布标签
-      id: tag
-      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
-      run: |
-        echo "release_tag=$(date +"%Y%m%d%H")-test" >> $GITHUB_OUTPUT
-        echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
-        touch release.txt
-        echo "
-                   
-                          🍎  test🍎                   
-        
-                                                
-                                      
-                     
-         **test-end**            
-                     
-        ★ 源码 : https://github.com/coolsnowwolf/lede
-        ★ 分支 : master
-        ★ 感谢源码作者无私分享！
-        
-        ⏰ 编译时间：${{ env.FILE_TIME1 }}
-        
-        🎈 内核版本：${{ env.KERNEL_PATCHVER }}
-        
-        🎉 编译版本：${{ env.DISTRIB_REVISION }}
-        
-        " >> release.txt
-        echo "status=success" >> $GITHUB_OUTPUT
+    
     
     
     - name: 删除运行记录
