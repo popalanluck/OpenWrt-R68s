@@ -20,9 +20,9 @@ on:
         required: false
         default: 'false'
         
-# 定时触发编译(每隔10天，6点 开始编译)
+# 定时触发编译(每个月的 28日16点16分，开始编译)
   schedule:
-   - cron: 16 6 */10 * *
+   - cron: 16 16 28 * *
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
@@ -212,7 +212,8 @@ jobs:
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
-                        ★                  此固件未经实际测试，仅供参考                        ★
+                               ★  当前编译型号： Immortalwrt-Xiaomi-AX3600
+                               ★    此特制固件无法保证能用于正常刷机，仅供参考。     ★
                          
                          🍎  本固件已经集成istore应用商店,可安装istore内的大部分应用。🍎
                          
