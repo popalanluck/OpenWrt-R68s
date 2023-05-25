@@ -1,8 +1,7 @@
 
-#                   Immortalwrt-在线编译固件
+#                             Immortalwrt-在线编译固件
 
-#                       当前编译型号：
-#                   Immortalwrt-ax3600 固件
+#                  当前编译型号：         Immortalwrt-Xiaomi-AX3600 固件
 
 #                   此固件无法保证能用于正常刷机，仅供参考。
 
@@ -31,9 +30,6 @@
 - [Lean](https://github.com/coolsnowwolf/lede)
 - [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)
 - [sirpdboy](https://github.com/sirpdboy/sirpdboy-package)
-- [istore](https://github.com/linkease/istore)
-
-                             
+- [istore](https://github.com/linkease/istore)                          
                              
                            
-
