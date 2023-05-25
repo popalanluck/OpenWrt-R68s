@@ -1,7 +1,7 @@
 
 #                             Immortalwrt-在线编译固件
 
-#                  当前编译型号：         Immortalwrt-Xiaomi-AX3600 固件
+#                  当前编译型号：        Immortalwrt-Xiaomi-AX3600
 
 #                   此固件无法保证能用于正常刷机，仅供参考。
 
