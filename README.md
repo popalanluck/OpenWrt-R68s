@@ -4,6 +4,8 @@
 #                       当前编译型号：
 #                   Immortalwrt-ax3600 固件
 
+#                   此固件无法保证能用于正常刷机，仅供参考。
+
 ##  基于OpenWrt-Actions-Lean自动化在线编译脚本  
 
 - [编译固件下载releases](https://github.com/popalanluck/OpenWrt-R68s/releases)
