@@ -82,12 +82,7 @@ jobs:
         START_TIME=`date +'%Y-%m-%d %H:%M:%S'`
         echo "START_SECONDS=$(date --date="$START_TIME" +%s)" >> $GITHUB_ENV
 
-    - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -f -a
-
+    
     - name: 加载自定义配置
       run: |
         [ -e files ] && mv files openwrt/files
