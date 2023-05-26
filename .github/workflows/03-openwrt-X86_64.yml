@@ -19,9 +19,9 @@ on:
         required: false
         default: 'false'
         
-# 定时触发编译 (每隔7日，16点 开始编译)
+# 定时触发编译 (每隔7日，13点 开始编译)
   schedule:
-   - cron: 16 16 */7 * *
+   - cron: 16 13 */7 * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -250,7 +250,7 @@ jobs:
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
-    - name: Delete old workflow runs 删除运行记录
+    - name: 删除运行记录 Delete old workflow runs
       uses: MajorScruffy/delete-old-workflow-runs@main
       with:
         repository: ${{ github.repository }}
