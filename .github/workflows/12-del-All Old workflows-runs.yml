@@ -19,9 +19,9 @@ on:
         required: false
         default: 'false'
         
-# 定时触发(每月的31日，16点开始)
+# 定时触发(每月的1日，0点开始清理)
   schedule:
-    - cron: 16 16 31 * *
+    - cron: 0 0 1 * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
