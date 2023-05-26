@@ -251,11 +251,11 @@ jobs:
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
-    - name: 删除运行记录
-      uses: Mattraks/delete-workflow-runs@v2
+    - name: 删除运行记录 Delete old workflow runs 
+      uses: MajorScruffy/delete-old-workflow-runs@main
       with:
-        retain_days: 3     #保留最后多少记录不删除
-        keep_minimum_runs: 0
+        repository: ${{ github.repository }}
+        older-than-seconds: 86400                          # remove all workflow runs older than 1 Day
    
 
     - name: 删除自动发布的旧固件
