@@ -50,10 +50,10 @@ jobs:
         sudo timedatectl set-timezone "$TZ"   
         
     - name: Delete old workflow runs 删除运行记录
-      uses: MajorScruffy/delete-old-workflow-runs@v0.3.0
+      uses: MajorScruffy/delete-old-workflow-runs@main
       with:
         repository: ${{ github.repository }}
-        older-than-seconds: 86400                           # remove all workflow runs older than 1 Day
+        older-than-seconds: 63                           # remove all workflow runs older than 1 Day
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
