@@ -19,13 +19,13 @@ on:
         required: false
         default: 'false'
         
-# 定时触发编译 (每隔7日，13点 开始编译)
+# 定时触发编译 (每月31日，16点 开始编译)
   schedule:
-   - cron: 16 13 */7 * *
+   - cron: 16 16 31 * *
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/istoreos/istoreos
+  REPO_BRANCH: main
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/13-X86_64.config
   DIY_P1_SH: diy-part1.sh
@@ -207,7 +207,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y%m%d%H")-OpenWrt-X86_64" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y%m%d%H")-istoreos-X86_64-by-alan" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
@@ -220,9 +220,9 @@ jobs:
                               🎉 特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。🎉 
            
                         
-        **  在线编译固件---OpenWrt(lede)---For---X86_64  **
+        **  在线编译固件---Istoreos---For---X86_64---By Alan  **
         
-        ★ 源码 : https://github.com/coolsnowwolf/lede
+        ★ 源码 : https://github.com/istoreos/istoreos
         ★ 分支 : master
         ★ 感谢源码作者无私分享！
         
@@ -245,7 +245,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }}【发布】-OpenWrt（lede）---X86_64 固件
+        name: ${{ steps.tag.outputs.release_date }}【发布】-istoreos-X86_64-by-alan 固件
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
