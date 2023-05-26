@@ -49,17 +49,11 @@ jobs:
       run: |
         sudo timedatectl set-timezone "$TZ"   
         
-   # - name: Delete old workflow runs 删除运行记录
-   #   uses: MajorScruffy/delete-old-workflow-runs@main
-   #   with:
-   #     repository: ${{ github.repository }}
-   #     older-than-seconds: 63                           # remove all workflow runs older than 1 Min
-    
     - name: Delete old workflow runs 删除运行记录
-      uses: Mattraks/delete-workflow-runs@v2
+      uses: MajorScruffy/delete-old-workflow-runs@main
       with:
         repository: ${{ github.repository }}
-        older-than-seconds: 63                           # remove all workflow runs older than 1 min
-        keep_minimum_runs: 0     
-        
+        older-than-seconds: 86400                           # remove all workflow runs older than 1 Day .
+    
+  
    
