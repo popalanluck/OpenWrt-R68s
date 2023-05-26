@@ -250,7 +250,7 @@ jobs:
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
-    - name: 删除运行记录
+    - name: 删除运行记录 delete-old-workflow-runs
       uses: MajorScruffy/delete-old-workflow-runs@main
       with:
         repository: ${{ github.repository }}
