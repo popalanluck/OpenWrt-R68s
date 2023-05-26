@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 12-del-runs
+name: 12-delete-old-workflow-runs
 permissions: write-all
 on:
   repository_dispatch:
