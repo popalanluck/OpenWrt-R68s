@@ -8,6 +8,7 @@
 #           小米(Xiaomi)-AX3600 固件
 #           小米(Xiaomi)-Router-3G 固件
 #           红米(Redmi)-AX6S 固件
+#           iStoreOS---X86_64 定制固件---(于2023-05-26新增编译，主要变化为：集成部分无线网卡驱动 与 添加一些应用)
 
 ##  基于OpenWrt-Actions-Lean自动化在线编译脚本  
 
