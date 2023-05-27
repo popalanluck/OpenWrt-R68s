@@ -34,8 +34,8 @@ git clone https://github.com/peter-tank/luci-app-fullconenat package/luci-app-fu
 svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-ssr-plus  package/luci-app-ssr-plus
 svn export https://github.com/kiddin9/openwrt-packages/branches/master/lua-neturl package/lua-neturl
 svn export https://github.com/kiddin9/openwrt-packages/branches/master/redsocks2 package/redsocks2
-svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-wan-mac package/luci-app-wan-mac
 
+# svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-wan-mac package/luci-app-wan-mac
 # svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-theme-alpha package/luci-theme-alpha
 
 # 添加 cpufreq
