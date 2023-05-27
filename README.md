@@ -1,13 +1,9 @@
 
-#                 OpenWrt(lede)-多种设备-在线编译固件
+#                               DIY --- iStoreOS
 
-#                       当前编译型号：
-#           电犀牛(fastrhino)- R66S 和 R68S 固件
-#           友善(friendlyarm)- Nanopi-R5c 固件
-#           X86_64 固件
-#           小米(Xiaomi)-AX3600 固件
-#           小米(Xiaomi)-Router-3G 固件
-#           红米(Redmi)-AX6S 固件
+#                       当前编译型号： iStoreOS---X86_64 定制固件
+#                                  
+#          (于2023-05-26新增编译，主要变化为：集成部分无线网卡驱动 与 添加一些应用)
 
 ##  基于OpenWrt-Actions-Lean自动化在线编译脚本  
 
