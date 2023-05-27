@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 14-iStoreOS-X86_64-new-By Alan
+name: 14-iStoreOS-X86_64-lite-By Alan
 permissions: write-all
 on:
   repository_dispatch:
@@ -202,18 +202,19 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y%m%d%H")-iStoreOS-X86_64-new-by-alan" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y%m%d%H")-iStoreOS-X86_64-lite-by-alan" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
-                        ★                     此固件未经实际测试，仅供参考                     ★ 
+                        ★                     此固件未经实际测试，仅供参考                     ★
                         
+                       🍎                      精简版，去除了部分应用的组件。                           🍎
                        🍎  尝试集成intel 7260/7265/8265 & MT7916/MT7921 和 RTL8822CE 等无线网卡驱动    🍎
                         
-                       🎉 特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。         🎉 
+                       🎉  特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。         🎉 
            
                         
-        **  在线编译固件---Istoreos---For---X86_64---By Alan  **
+        **  在线编译固件---iStoreOS-X86_64-lite---By Alan  **
         
         ★ 源码 : https://github.com/istoreos/istoreos
         ★ 分支 : master
@@ -221,7 +222,7 @@ jobs:
         
         ⏰ 编译时间：${{ env.FILE_TIME1 }}
         
-        🎈 内核版本：${{ env.KERNEL_PATCHVER }}
+        🎈 内核版本：${{ env.KERNEL_PATCHVER }}.188
         
         🖥  管理地址：    192.168.6.1  
         
@@ -236,7 +237,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }}【发布】-iStoreOS-X86_64-new-by-alan 固件
+        name: ${{ steps.tag.outputs.release_date }}【发布】-iStoreOS-X86_64-lite-by-alan 固件
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
