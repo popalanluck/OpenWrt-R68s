@@ -19,9 +19,9 @@ on:
         required: false
         default: 'false'
         
-# 定时触发编译 (每月31日，16点 开始编译)
+# 定时触发编译 (每月28日，13点 开始编译)
   schedule:
-   - cron: 16 16 31 * *
+   - cron: 13 13 28 * *
 
 env:
   REPO_URL: https://github.com/istoreos/istoreos
