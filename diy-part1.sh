@@ -28,8 +28,8 @@ git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/
 git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
 
 # git clone -b main --single-branch https://github.com/lxz1104/openwrt-fullconenat package/fullconenat
-# git clone https://github.com/sbwml/fullconenat package/fullconenat
-# git clone https://github.com/peter-tank/luci-app-fullconenat package/luci-app-fullconenat
+git clone https://github.com/sbwml/fullconenat package/fullconenat
+git clone https://github.com/peter-tank/luci-app-fullconenat package/luci-app-fullconenat
 
 svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-ssr-plus  package/luci-app-ssr-plus
 svn export https://github.com/kiddin9/openwrt-packages/branches/master/lua-neturl package/lua-neturl
@@ -50,10 +50,10 @@ ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/lu
 ./scripts/feeds install -a -f
 
 # 添加 istore应用商店
-echo >> feeds.conf.default
-echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
-./scripts/feeds update istore
-./scripts/feeds install -d y -p istore luci-app-store
+#echo >> feeds.conf.default
+#echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+#./scripts/feeds update istore
+#./scripts/feeds install -d y -p istore luci-app-store
 
 # nas-packages-luci
 
@@ -69,24 +69,29 @@ echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >
 
 # 在线用户
 svn export https://github.com/haiibo/packages/trunk/luci-app-onliner package/luci-app-onliner
-sed -i '/bin\/sh/a\uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
-sed -i '/nlbwmon/a\uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
+# sed -i '/bin\/sh/a\uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
+# sed -i '/nlbwmon/a\uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
 
 # 修改版本为编译日期
-date_version=$(date +"%y.%-m.%-d")
-orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
-sed -i "s/${orig_version}/R${date_version} by Alan/g" package/lean/default-settings/files/zzz-default-settings
+#date_version=$(date +"%y.%-m.%-d")
+#orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
+#sed -i "s/${orig_version}/R${date_version} by Alan/g" package/lean/default-settings/files/zzz-default-settings
 
 # 执行命令来切换内核
-sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/rockchip/Makefile
-sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/x86/Makefile
+# sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/rockchip/Makefile
+# sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/x86/Makefile
 # sed -i 's/PATCHVER:=5.15/PATCHVER:=5.10/g' target/linux/ipq807x/Makefile
 
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
 
 #修改NTP服务器#
-sed -i "s|'cn.pool.ntp.org'|'ntp.ntsc.ac.cn'|g" package/base-files/files/bin/config_generate
+sed -i "s|'0.openwrt.pool.ntp.org'|'ntp.ntsc.ac.cn'|g" package/base-files/files/bin/config_generate
+sed -i "s|'1.openwrt.pool.ntp.org'|'ntp1.aliyun.com'|g" package/base-files/files/bin/config_generate
+sed -i "s|'2.openwrt.pool.ntp.org'|'time1.cloud.tencent.com'|g" package/base-files/files/bin/config_generate
+sed -i "s|'3.openwrt.pool.ntp.org'|'cn.ntp.org.cn'|g" package/base-files/files/bin/config_generate
+sed -i "s|system.ntp.enable_server='0'|system.ntp.enable_server='1'|g" package/base-files/files/bin/config_generate
+
 
 # TTYD 不指定接口，同时实现自动登录
 sed -i 's/option interface/#option interface/g' feeds/packages/utils/ttyd/files/ttyd.config
