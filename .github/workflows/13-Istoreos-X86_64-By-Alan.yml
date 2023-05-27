@@ -119,14 +119,9 @@ jobs:
         echo
         echo "================================================"
         echo
-
-        ZZZ="package/lean/default-settings/files/zzz-default-settings"
-        echo "DISTRIB_REVISION=$(cat $ZZZ|grep DISTRIB_REVISION= | sed 's/^.\{24\}//g' | sed 's/.\{26\}$//')" >> $GITHUB_ENV
-        echo "KERNEL_PATCHVER=$(cat target/linux/x86/Makefile|grep KERNEL_PATCHVER | sed 's/^.\{17\}//g')" >> $GITHUB_ENV
-        echo "	    当前编译版本：$(cat $ZZZ|grep DISTRIB_REVISION= | sed 's/^.\{24\}//g' | sed 's/.\{26\}$//')"
         echo
         echo
-        echo "	    内核版本：$(cat target/linux/x86/Makefile|grep KERNEL_PATCHVER | sed 's/^.\{17\}//g')"
+        echo "内核版本：$(cat target/linux/x86/Makefile|grep KERNEL_PATCHVER | sed 's/^.\{17\}//g')"
         echo
         echo "================================================"
 
@@ -213,11 +208,9 @@ jobs:
         echo "
                         ★                     此固件未经实际测试，仅供参考                     ★ 
                         
-                        ★     尝试增加intel 7265/8265 & MT7921 和 RTL8822CE 无线网卡驱动       ★
+                       🍎  尝试集成intel 7265/8265 & MT7916/MT7921 和 RTL8822CE 无线网卡驱动     🍎
                         
-                           🍎  本固件已经集成istore应用商店与Docker,可安装istore内的大部分应用。🍎
-                           
-                              🎉 特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。🎉 
+                       🎉 特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。         🎉 
            
                         
         **  在线编译固件---Istoreos---For---X86_64---By Alan  **
@@ -230,13 +223,11 @@ jobs:
         
         🎈 内核版本：${{ env.KERNEL_PATCHVER }}
         
-        🎉 编译版本：${{ env.DISTRIB_REVISION }}
+        🖥  管理地址：    192.168.6.1  
         
-        🖥  管理地址：  192.168.6.1  
+        🌴  登录名称：   root
         
-        🌴  登录名称：  root
-        
-        🛠  密码：      password" >> release.txt
+        🛠   密码：      password" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
     
     - name: 自动发布固件到 Releases
