@@ -217,13 +217,12 @@ jobs:
         **  在线编译固件---iStoreOS-X86_64-lite---By Alan  **
         
         ★ 源码 : https://github.com/istoreos/istoreos
-        ★ 分支 : master
+        ★ 分支 : master 
+        ★ 初始内核版本： 5.4.188
         ★ 感谢源码作者无私分享！
         
-        ⏰ 编译时间：${{ env.FILE_TIME1 }}
-        
-        🎈 内核版本：${{ env.KERNEL_PATCHVER }}.188
-        
+        ⏰ 编译时间：${{ env.FILE_TIME1 }}        
+               
         🖥  管理地址：    192.168.6.1  
         
         🌴  登录名称：   root
