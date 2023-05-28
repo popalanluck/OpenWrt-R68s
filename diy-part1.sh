@@ -22,8 +22,8 @@ echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.de
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 # git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 
-svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
-svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/passwall2
+# svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
+# svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/passwall2
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
 
@@ -31,9 +31,9 @@ git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-part
 git clone https://github.com/sbwml/fullconenat package/fullconenat
 git clone https://github.com/peter-tank/luci-app-fullconenat package/luci-app-fullconenat
 
-svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-ssr-plus  package/luci-app-ssr-plus
-svn export https://github.com/kiddin9/openwrt-packages/branches/master/lua-neturl package/lua-neturl
-svn export https://github.com/kiddin9/openwrt-packages/branches/master/redsocks2 package/redsocks2
+# svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-ssr-plus  package/luci-app-ssr-plus
+# svn export https://github.com/kiddin9/openwrt-packages/branches/master/lua-neturl package/lua-neturl
+# svn export https://github.com/kiddin9/openwrt-packages/branches/master/redsocks2 package/redsocks2
 
 # svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-wan-mac package/luci-app-wan-mac
 # svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-theme-alpha package/luci-theme-alpha
