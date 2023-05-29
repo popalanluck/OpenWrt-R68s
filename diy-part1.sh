@@ -68,7 +68,7 @@ echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >
 # sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
 
 # 在线用户
-svn export https://github.com/haiibo/packages/trunk/luci-app-onliner package/luci-app-onliner
+# svn export https://github.com/haiibo/packages/trunk/luci-app-onliner package/luci-app-onliner
 # sed -i '/bin\/sh/a\uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
 # sed -i '/nlbwmon/a\uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
 
