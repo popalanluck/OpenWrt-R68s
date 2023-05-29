@@ -13,7 +13,7 @@
 # 添加软件源
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 echo 'src-git opentopd https://github.com/sirpdboy/sirpdboy-package' >>feeds.conf.default
-echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+# echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 
 
 # 添加第三方软件包
