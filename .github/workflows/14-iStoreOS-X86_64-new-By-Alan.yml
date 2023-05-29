@@ -71,6 +71,7 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         cd openwrt
+        echo 'src-git opentopd https://github.com/sirpdboy/sirpdboy-package' >>feeds.conf.default
         rm -rf package/firmware
         svn export https://github.com/coolsnowwolf/lede/branches/master/package/firmware package/firmware        
 
