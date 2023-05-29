@@ -70,6 +70,9 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        cd openwrt
+        rm -rf package/firmware
+        svn export https://github.com/coolsnowwolf/lede/branches/master/package/firmware package/firmware        
 
     - name: 更新时区、编译时间
       id: date
