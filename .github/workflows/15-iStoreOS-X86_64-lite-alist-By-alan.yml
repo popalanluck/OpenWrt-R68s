@@ -92,8 +92,8 @@ jobs:
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
-        rm -rf feeds/packages/lang/golang
-        svn export https://github.com/sbwml/packages_lang_golang/branches/19.x feeds/packages/lang/golang
+        #rm -rf feeds/packages/lang/golang
+        # svn export https://github.com/sbwml/packages_lang_golang/branches/19.x feeds/packages/lang/golang
         git clone https://github.com/sbwml/luci-app-alist package/alist
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
