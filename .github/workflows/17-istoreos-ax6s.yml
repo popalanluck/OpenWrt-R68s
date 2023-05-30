@@ -90,6 +90,10 @@ jobs:
         rm -rf package/firmware
         svn export https://github.com/coolsnowwolf/lede/branches/master/package/firmware package/firmware
         echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+        echo >> feeds.conf.default
+        echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+        ./scripts/feeds update istore
+        ./scripts/feeds install -d y -p istore luci-app-store
         $GITHUB_WORKSPACE/$DIY_P1_SH       
 
     - name: Update feeds
