@@ -94,6 +94,7 @@ jobs:
         echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
         ./scripts/feeds update istore
         ./scripts/feeds install -d y -p istore luci-app-store
+        git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
         $GITHUB_WORKSPACE/$DIY_P1_SH       
 
     - name: Update feeds
