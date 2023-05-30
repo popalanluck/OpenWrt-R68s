@@ -19,9 +19,9 @@ on:
         required: false
         default: 'false'
         
-# 定时触发编译 (每月28日，13点 开始编译)
+# 定时触发编译 (每月28日，11点 开始编译)
   schedule:
-   - cron: 13 13 28 * *
+   - cron: 11 11 28 * *
 
 env:
   REPO_URL: https://github.com/istoreos/istoreos
@@ -69,8 +69,7 @@ jobs:
       run: |
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        cd openwrt            
+        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt             
 
     - name: 更新时区、编译时间
       id: date
