@@ -76,3 +76,4 @@ sed -i 's/iptables=1/iptables=0/g' feeds/packages/utils/dockerd/files/etc/sysctl
 rm -rf target/linux/generic/backport-5.10/430-v6.3-ubi-Fix-failure-attaching-when-vid_hdr-offset-equals.patch
 rm -rf target/linux/generic/pending-5.15/790-bus-mhi-core-add-SBL-state-callback.patch
 rm -rf target/linux/generic/backport-5.4/011-kbuild-export-SUBARCH.patch
+rm -rf target/linux/ipq807x/patches-5.4/0002-v5.8-arm64-dts-ipq8074-qcom-Re-arrange-dts-nodes-based-on.patch
