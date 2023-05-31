@@ -80,7 +80,6 @@ rm -rf target/linux/ipq807x/patches-5.4/0002-v5.8-arm64-dts-ipq8074-qcom-Re-arra
 rm -rf target/linux/ipq807x/patches-5.4/104-arm64-dts-ipq8074-Add-SMEM-nodes.patch
 rm -rf target/linux/ipq807x/patches-5.4/105-arm64-dts-ipq8074-Add-SCM-node.patch
 rm -rf target/linux/ipq807x/patches-5.4/106-11-arm64-dts-qcom-Enable-Q6v5-WCSS-for-ipq8074-SoC.patch
-
-# rm -rf target/linux/ipq807x/patches-5.4/107-arm64-dts-ipq8074-Add-WLAN-node.patch
-# rm -rf target/linux/ipq807x/patches-5.4/901-arm64-qcom-dts-add-IPQ8074-dts.patch
-# rm -rf target/linux/ipq807x/patches-5.4/997-device_tree_cmdline.patch
+rm -rf target/linux/ipq807x/patches-5.4/107-arm64-dts-ipq8074-Add-WLAN-node.patch
+rm -rf target/linux/ipq807x/patches-5.4/901-arm64-qcom-dts-add-IPQ8074-dts.patch
+rm -rf target/linux/ipq807x/patches-5.4/997-device_tree_cmdline.patch
