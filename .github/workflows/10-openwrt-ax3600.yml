@@ -108,8 +108,8 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         rm -rf include/kernel-5.4
-        echo 'LINUX_VERSION-5.4 = .60' >>include/kernel-5.4
-        echo 'LINUX_KERNEL_HASH-5.4.60 = add2ab2385c40fc9a3dfebe403e56da8500b633dc7dc42cf0c670c61d151a223' >>include/kernel-5.4
+        echo 'LINUX_VERSION-5.4 = .244' >>include/kernel-5.4
+        echo 'LINUX_KERNEL_HASH-5.4.244 = 90f5280e95ed7b374ad6f3979ed08008e29a051e5f372d367c06ed75b002a21b' >>include/kernel-5.4
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH connection to Actions
