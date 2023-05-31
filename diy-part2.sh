@@ -77,3 +77,4 @@ rm -rf target/linux/generic/backport-5.10/430-v6.3-ubi-Fix-failure-attaching-whe
 rm -rf target/linux/generic/pending-5.15/790-bus-mhi-core-add-SBL-state-callback.patch
 rm -rf target/linux/generic/backport-5.4/011-kbuild-export-SUBARCH.patch
 rm -rf target/linux/ipq807x/patches-5.4/0002-v5.8-arm64-dts-ipq8074-qcom-Re-arrange-dts-nodes-based-on.patch
+rm -rf target/linux/ipq807x/patches-5.4/104-arm64-dts-ipq8074-Add-SMEM-nodes.patch
