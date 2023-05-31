@@ -79,3 +79,4 @@ rm -rf target/linux/generic/backport-5.4/011-kbuild-export-SUBARCH.patch
 rm -rf target/linux/ipq807x/patches-5.4/0002-v5.8-arm64-dts-ipq8074-qcom-Re-arrange-dts-nodes-based-on.patch
 rm -rf target/linux/ipq807x/patches-5.4/104-arm64-dts-ipq8074-Add-SMEM-nodes.patch
 rm -rf target/linux/ipq807x/patches-5.4/105-arm64-dts-ipq8074-Add-SCM-node.patch
+rm -rf target/linux/ipq807x/patches-5.4/106-11-arm64-dts-qcom-Enable-Q6v5-WCSS-for-ipq8074-SoC.patch
