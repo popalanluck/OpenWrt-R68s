@@ -88,7 +88,8 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         rm -rf target/linux/ipq807x
-        svn export https://github.com/immortalwrt/immortalwrt/branches/master/target/linux/ipq807x target/linux/ipq807x
+        svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x target/linux/ipq807x
+        # svn export https://github.com/immortalwrt/immortalwrt/branches/master/target/linux/ipq807x target/linux/ipq807x
         # svn export https://github.com/coolsnowwolf/lede/branches/master/target/linux/ipq807x/files-5.10 target/linux/ipq807x/files-5.10
         # svn export https://github.com/coolsnowwolf/lede/branches/master/target/linux/ipq807x/patches-5.10 target/linux/ipq807x/patches-5.10
         # svn export https://github.com/coolsnowwolf/lede/branches/master/target/linux/ipq807x/config-5.10 target/linux/ipq807x/config-5.10        
@@ -106,6 +107,9 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
+        rm -rf include/kernel-5.4
+        echo 'LINUX_VERSION-5.4 = .60' >>include/kernel-5.4
+        echo 'LINUX_KERNEL_HASH-5.4.60 = add2ab2385c40fc9a3dfebe403e56da8500b633dc7dc42cf0c670c61d151a223' >>include/kernel-5.4
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH connection to Actions
