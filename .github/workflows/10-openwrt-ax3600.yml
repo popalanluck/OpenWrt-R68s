@@ -92,6 +92,7 @@ jobs:
         svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/config-5.4 target/linux/ipq807x/config-5.4
         svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/patches-5.4 target/linux/ipq807x/patches-5.4
         rm -rf target/linux/ipq807x/Makefile
+        rm -rf target/linux/ipq807x/patches-5.4/*.*
         svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/Makefile target/linux/ipq807x/Makefile            
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
