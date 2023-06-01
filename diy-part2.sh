@@ -65,7 +65,7 @@ sed -i 's/iptables=1/iptables=0/g' feeds/packages/utils/dockerd/files/etc/sysctl
 # sed -i "s|'model'|model|g" package/feeds/kiddin9/luci-app-istorex/root/etc/config/istorex
 # sed -i "s|'wizard'|'router'|g" package/feeds/kiddin9/luci-app-istorex/root/etc/config/istorex
 
-# 科学上网插件
+# 科学上网插件 
 
 
 # 科学上网插件依赖
@@ -83,4 +83,4 @@ rm -rf target/linux/generic/backport-5.4/011-kbuild-export-SUBARCH.patch
 # rm -rf target/linux/ipq807x/patches-5.4/107-arm64-dts-ipq8074-Add-WLAN-node.patch
 # rm -rf target/linux/ipq807x/patches-5.4/901-arm64-qcom-dts-add-IPQ8074-dts.patch
 # rm -rf target/linux/ipq807x/patches-5.4/997-device_tree_cmdline.patch
-rm -rf target/linux/ipq807x/patches-5.4/*
+rm -rf target/linux/ipq807x/patches-5.4/*.*
