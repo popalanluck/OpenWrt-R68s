@@ -27,6 +27,9 @@ svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
 
+sed -i 's/LINUX_VERSION-5.4 = .179/LINUX_VERSION-5.4 = .244/g' include/kernel-version.mk
+sed -i 's/LINUX_KERNEL_HASH-5.4.179 = 2c9bdec0922a95aff34e8d53d2e0ecf7e842033cd908d2959a43d34afb5d897d/LINUX_KERNEL_HASH-5.4.244 = 90f5280e95ed7b374ad6f3979ed08008e29a051e5f372d367c06ed75b002a21b/g' include/kernel-version.mk
+
 # git clone -b main --single-branch https://github.com/lxz1104/openwrt-fullconenat package/fullconenat
 # git clone https://github.com/sbwml/fullconenat package/fullconenat
 # git clone https://github.com/peter-tank/luci-app-fullconenat package/luci-app-fullconenat
