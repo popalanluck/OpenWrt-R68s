@@ -15,6 +15,13 @@
 echo 'src-git opentopd https://github.com/sirpdboy/sirpdboy-package' >>feeds.conf.default
 #echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 
+rm -rf target/linux/ipq807x
+svn export https://github.com/immortalwrt/immortalwrt/branches/master/target/linux/ipq807x target/linux/ipq807x
+svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/config-5.4 target/linux/ipq807x/config-5.4
+svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/patches-5.4 target/linux/ipq807x/patches-5.4
+rm -rf target/linux/ipq807x/Makefile
+rm -rf target/linux/ipq807x/patches-5.4/*.*
+svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/Makefile target/linux/ipq807x/Makefile   
 
 # 添加第三方软件包
 # git clone https://github.com/kiddin9/openwrt-packages package/feeds/kiddin9
