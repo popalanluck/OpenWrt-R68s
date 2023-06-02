@@ -81,4 +81,5 @@ echo 'net.bridge.bridge-nf-call-iptables=0' >>feeds/packages/utils/dockerd/files
 rm -rf target/linux/generic/backport-5.4/*
 rm -rf target/linux/generic/pending-5.4/*
 rm -rf target/linux/ipq807x/patches-5.4/*
+rm -rf target/linux/generic/hack-5.4/*
 
