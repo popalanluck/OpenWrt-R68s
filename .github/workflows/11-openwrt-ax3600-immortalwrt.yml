@@ -85,8 +85,15 @@ jobs:
     - name: 加载自定义源码
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
-        chmod +x $DIY_P1_SH
         cd openwrt
+        chmod +x $DIY_P1_SH
+        rm -rf target/linux/ipq807x
+        svn export https://github.com/immortalwrt/immortalwrt/branches/master/target/linux/ipq807x target/linux/ipq807x
+        svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/config-5.4 target/linux/ipq807x/config-5.4
+        svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/patches-5.4 target/linux/ipq807x/patches-5.4
+        rm -rf target/linux/ipq807x/Makefile
+        rm -rf target/linux/ipq807x/patches-5.4/*.*
+        svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/Makefile target/linux/ipq807x/Makefile        
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
