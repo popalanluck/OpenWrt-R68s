@@ -15,6 +15,9 @@
 # echo 'src-git opentopd https://github.com/sirpdboy/sirpdboy-package' >>feeds.conf.default
 # echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 
+sed -i 's/LINUX_VERSION-5.4 = .179/LINUX_VERSION-5.4 = .244/g' include/kernel-version.mk
+sed -i 's/LINUX_KERNEL_HASH-5.4.179 = 2c9bdec0922a95aff34e8d53d2e0ecf7e842033cd908d2959a43d34afb5d897d/LINUX_KERNEL_HASH-5.4.244 = 90f5280e95ed7b374ad6f3979ed08008e29a051e5f372d367c06ed75b002a21b/g' include/kernel-version.mk
+
 
 # 添加第三方软件包
 # git clone https://github.com/kiddin9/openwrt-packages package/feeds/kiddin9
