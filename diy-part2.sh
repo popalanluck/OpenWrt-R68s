@@ -75,3 +75,4 @@ echo 'net.bridge.bridge-nf-call-iptables=0' >>feeds/packages/utils/dockerd/files
 # rm -rf target/linux/generic/backport-5.15/430-v6.3-ubi-Fix-failure-attaching-when-vid_hdr-offset-equals.patch
 # rm -rf target/linux/generic/backport-5.10/430-v6.3-ubi-Fix-failure-attaching-when-vid_hdr-offset-equals.patch
 # rm -rf target/linux/generic/pending-5.15/790-bus-mhi-core-add-SBL-state-callback.patch
+rm -rf target/linux/generic/backport-5.4/080-wireguard-0021-crypto-blake2s-generic-C-library-implementation-and-.patch
