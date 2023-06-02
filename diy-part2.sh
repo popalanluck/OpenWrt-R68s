@@ -79,5 +79,6 @@ echo 'net.bridge.bridge-nf-call-iptables=0' >>feeds/packages/utils/dockerd/files
 #rm -rf target/linux/generic/backport-5.4/080-wireguard-0021-crypto-blake2s-generic-C-library-implementation-and-.patch
 #rm -rf target/linux/generic/backport-5.4/080-wireguard-0023-crypto-blake2s-implement-generic-shash-driver.patch
 rm -rf target/linux/generic/backport-5.4/*
-rm -rf target/linux/generic/backport-5.4/*.*
+rm -rf target/linux/generic/pending-5.4/*
+rm -rf target/linux/ipq807x/patches-5.4/*
 
