@@ -74,7 +74,7 @@ sed -i 's/iptables=1/iptables=0/g' feeds/packages/utils/dockerd/files/etc/sysctl
 # rm -rf target/linux/rockchip/patches-6.1/113-ethernet-stmicro-stmmac-Add-SGMII-QSGMII-support.patch
 # rm -rf target/linux/generic/backport-5.15/430-v6.3-ubi-Fix-failure-attaching-when-vid_hdr-offset-equals.patch
 rm -rf target/linux/generic/backport-5.4/*
-rm -rf target/linux/generic/backport-5.4/*.*
+rm -rf target/linux/generic/pending-5.4/*
 rm -rf target/linux/ipq807x/patches-5.4/*
-rm -rf target/linux/ipq807x/patches-5.4/*.*
+rm -rf target/linux/generic/hack-5.4/*
 
