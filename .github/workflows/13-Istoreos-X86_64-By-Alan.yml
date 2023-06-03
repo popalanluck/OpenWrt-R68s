@@ -93,7 +93,7 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
-        svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/passwall2
+        git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall2
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
