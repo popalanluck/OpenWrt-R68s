@@ -40,7 +40,7 @@ git clone https://github.com/jerrykuku/luci-theme-argon.git package/feeds/luci/l
 
 
 # 取消bootstrap为默认主题，将默认主题改为 argon
-# sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # 添加额外软件包
 
@@ -73,8 +73,8 @@ sed -i 's/iptables=1/iptables=0/g' feeds/packages/utils/dockerd/files/etc/sysctl
 # 删除编译出错的无用补丁
 # rm -rf target/linux/rockchip/patches-6.1/113-ethernet-stmicro-stmmac-Add-SGMII-QSGMII-support.patch
 # rm -rf target/linux/generic/backport-5.15/430-v6.3-ubi-Fix-failure-attaching-when-vid_hdr-offset-equals.patch
-rm -rf target/linux/generic/backport-5.4/*
-rm -rf target/linux/generic/pending-5.4/*
+# rm -rf target/linux/generic/backport-5.4/*
+# rm -rf target/linux/generic/pending-5.4/*
+# rm -rf target/linux/generic/hack-5.4/*
 rm -rf target/linux/ipq807x/patches-5.4/*
-rm -rf target/linux/generic/hack-5.4/*
 
