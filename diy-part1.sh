@@ -35,8 +35,8 @@ svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq
 # git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
 
 # git clone -b main --single-branch https://github.com/lxz1104/openwrt-fullconenat package/fullconenat
-# git clone https://github.com/sbwml/fullconenat package/fullconenat
-# git clone https://github.com/peter-tank/luci-app-fullconenat package/luci-app-fullconenat
+git clone https://github.com/sbwml/fullconenat package/fullconenat
+git clone https://github.com/peter-tank/luci-app-fullconenat package/luci-app-fullconenat
 
 # svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-ssr-plus  package/luci-app-ssr-plus
 # svn export https://github.com/kiddin9/openwrt-packages/branches/master/lua-neturl package/lua-neturl
@@ -89,7 +89,7 @@ svn export https://github.com/haiibo/packages/trunk/luci-app-onliner package/luc
 #sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/x86/Makefile
 
 # 修改默认IP
-sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.36.1/g' package/base-files/files/bin/config_generate
 
 # TTYD 不指定接口，同时实现自动登录
 sed -i 's/option interface/#option interface/g' feeds/packages/utils/ttyd/files/ttyd.config
