@@ -111,7 +111,8 @@ jobs:
         cd openwrt
         sed -i 's/192.168.1.1/192.168.36.1/g' package/base-files/files/bin/config_generate
         sed -i 's/192.168.6.1/192.168.36.1/g' package/base-files/files/bin/config_generate
-        sed -i 's/PATCHVER:=5.15/PATCHVER:=5.4/g' target/linux/ipq807x/Makefile        
+        sed -i 's/PATCHVER:=5.15/PATCHVER:=5.4/g' target/linux/ipq807x/Makefile 
+        rm -rf target/linux/generic/backport-5.4/080-wireguard-0021-crypto-blake2s-generic-C-library-implementation-and-.patch
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH connection to Actions
