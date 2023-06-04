@@ -17,6 +17,8 @@
 
 sed -i 's/LINUX_VERSION-5.4 = .179/LINUX_VERSION-5.4 = .244/g' include/kernel-version.mk
 sed -i 's/LINUX_KERNEL_HASH-5.4.179 = 2c9bdec0922a95aff34e8d53d2e0ecf7e842033cd908d2959a43d34afb5d897d/LINUX_KERNEL_HASH-5.4.244 = 90f5280e95ed7b374ad6f3979ed08008e29a051e5f372d367c06ed75b002a21b/g' include/kernel-version.mk
+sed -i 's/LINUX_VERSION-5.4 = .188/LINUX_VERSION-5.4 = .244/g' include/kernel-version.mk
+sed -i 's/LINUX_KERNEL_HASH-5.4.188 = 9fbc8bfdc28c9fce2307bdf7cf1172c9819df673397a411c40a5c3d0a570fdbc/LINUX_KERNEL_HASH-5.4.244 = 90f5280e95ed7b374ad6f3979ed08008e29a051e5f372d367c06ed75b002a21b/g' include/kernel-version.mk
 
 
 # 添加第三方软件包
