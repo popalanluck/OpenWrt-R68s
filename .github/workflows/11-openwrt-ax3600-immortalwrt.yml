@@ -101,6 +101,7 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
+        target/linux/generic/backport-5.4/080-wireguard-0021-crypto-blake2s-generic-C-library-implementation-and-.patch
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH connection to Actions
