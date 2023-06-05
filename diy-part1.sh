@@ -21,7 +21,9 @@ svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq
 svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/patches-5.4 target/linux/ipq807x/patches-5.4
 rm -rf target/linux/ipq807x/Makefile
 rm -rf target/linux/ipq807x/patches-5.4/*.*
-svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/Makefile target/linux/ipq807x/Makefile   
+svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/Makefile target/linux/ipq807x/Makefile
+sed -i 's/LINUX_VERSION-5.4 = .203/LINUX_VERSION-5.4 = .244/g' include/kernel-5.4
+sed -i 's/LINUX_KERNEL_HASH-5.4.203 = fc933f5b13066cfa54aacb5e86747a167bad1d8d23972e4a03ab5ee36c29798a/LINUX_KERNEL_HASH-5.4.244 = 90f5280e95ed7b374ad6f3979ed08008e29a051e5f372d367c06ed75b002a21b/g' include/kernel-5.4
 
 # 添加第三方软件包
 # git clone https://github.com/kiddin9/openwrt-packages package/feeds/kiddin9
