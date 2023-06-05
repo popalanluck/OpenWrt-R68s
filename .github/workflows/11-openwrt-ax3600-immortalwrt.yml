@@ -24,7 +24,7 @@ on:
    - cron: 18 18 31 * *
 
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt
+  REPO_URL: https://github.com/popalanluck/immortalwrt
   REPO_BRANCH: openwrt-18.06-k5.4
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/ax3600-immortalwrt.config
