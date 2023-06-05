@@ -88,7 +88,7 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         rm -rf target/linux/ipq807x
-        svn export https://github.com/popalanluck/immortalwrt/branches/openwrt-23.05/target/linux/ipq807x target/linux/ipq807x
+        svn export https://github.com/popalanluck/immortalwrt/branches/master/target/linux/ipq807x target/linux/ipq807x
         # svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/config-5.4 target/linux/ipq807x/config-5.4
         # svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/patches-5.4 target/linux/ipq807x/patches-5.4
         git clone https://github.com/sbwml/fullconenat package/fullconenat
