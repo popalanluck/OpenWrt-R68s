@@ -91,9 +91,11 @@ jobs:
         svn export https://github.com/immortalwrt/immortalwrt/branches/master/target/linux/ipq807x target/linux/ipq807x
         svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/config-5.4 target/linux/ipq807x/config-5.4
         svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/patches-5.4 target/linux/ipq807x/patches-5.4
-        rm -rf target/linux/ipq807x/Makefile
-        rm -rf target/linux/ipq807x/patches-5.4/*.*
-        svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/Makefile target/linux/ipq807x/Makefile            
+        git clone https://github.com/sbwml/fullconenat package/fullconenat
+        git clone https://github.com/peter-tank/luci-app-fullconenat package/luci-app-fullconenat
+        # rm -rf target/linux/ipq807x/Makefile
+        # rm -rf target/linux/ipq807x/patches-5.4/*.*
+        # svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/Makefile target/linux/ipq807x/Makefile            
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
@@ -108,10 +110,11 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
-        rm -rf include/kernel-5.4
-        echo 'LINUX_VERSION-5.4 = .244' >>include/kernel-5.4
-        echo 'LINUX_KERNEL_HASH-5.4.244 = 90f5280e95ed7b374ad6f3979ed08008e29a051e5f372d367c06ed75b002a21b' >>include/kernel-5.4
-        $GITHUB_WORKSPACE/$DIY_P2_SH
+        # rm -rf include/kernel-5.4
+        # echo 'LINUX_VERSION-5.4 = .244' >>include/kernel-5.4
+        # echo 'LINUX_KERNEL_HASH-5.4.244 = 90f5280e95ed7b374ad6f3979ed08008e29a051e5f372d367c06ed75b002a21b' >>include/kernel-5.4
+        sed -i 's/192.168.6.1/192.168.36.1/g' package/base-files/files/bin/config_generate
+        $GITHUB_WORKSPACE/$DIY_P2_SH        
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
@@ -242,7 +245,7 @@ jobs:
         
         🎉   编译版本：${{ env.DISTRIB_REVISION }}
         
-        🖥     管理地址：  192.168.6.1  
+        🖥     管理地址：  192.168.36.1  
         
         🌴    登录名称： root
         
