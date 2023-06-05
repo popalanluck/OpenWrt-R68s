@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 11-immortalwrt-AX3600
+name: 11-immortalwrt-AX3600-K5.4
 permissions: write-all
 on:
   repository_dispatch:
@@ -212,7 +212,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y%m%d%H")-immortalwrt-AX3600" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y%m%d%H")-immortalwrt-AX3600-K5.4" >> $GITHUB_OUTPUT
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
@@ -226,7 +226,7 @@ jobs:
                        ***  自动在线编译---OpenWrt(immortalwrt固件)---For--Xiaomi-AX3600  ***
         
         ★ 源码 : https://github.com/immortalwrt/immortalwrt
-        ★ 分支 : master
+        ★ 分支 : openwrt-18.06-k5.4
         ★ 感谢源码作者无私分享！
         
         ⏰   编译时间：${{ env.FILE_TIME1 }}
@@ -248,7 +248,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }}【发布】-immortalwrt-Xiaomi-AX3600 固件
+        name: ${{ steps.tag.outputs.release_date }}【发布】-immortalwrt-Xiaomi-AX3600-K5.4 固件
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
