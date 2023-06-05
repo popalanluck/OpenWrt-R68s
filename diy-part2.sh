@@ -75,7 +75,7 @@ sed -i 's/iptables=1/iptables=0/g' feeds/packages/utils/dockerd/files/etc/sysctl
 # rm -rf target/linux/generic/backport-5.15/430-v6.3-ubi-Fix-failure-attaching-when-vid_hdr-offset-equals.patch
 rm -rf target/linux/generic/backport-5.10/430-v6.3-ubi-Fix-failure-attaching-when-vid_hdr-offset-equals.patch
 rm -rf target/linux/generic/pending-5.15/790-bus-mhi-core-add-SBL-state-callback.patch
-rm -rf target/linux/generic/backport-5.4/011-kbuild-export-SUBARCH.patch
+# rm -rf target/linux/generic/backport-5.4/011-kbuild-export-SUBARCH.patch
 # rm -rf target/linux/ipq807x/patches-5.4/0002-v5.8-arm64-dts-ipq8074-qcom-Re-arrange-dts-nodes-based-on.patch
 # rm -rf target/linux/ipq807x/patches-5.4/104-arm64-dts-ipq8074-Add-SMEM-nodes.patch
 # rm -rf target/linux/ipq807x/patches-5.4/105-arm64-dts-ipq8074-Add-SCM-node.patch
@@ -83,4 +83,4 @@ rm -rf target/linux/generic/backport-5.4/011-kbuild-export-SUBARCH.patch
 # rm -rf target/linux/ipq807x/patches-5.4/107-arm64-dts-ipq8074-Add-WLAN-node.patch
 # rm -rf target/linux/ipq807x/patches-5.4/901-arm64-qcom-dts-add-IPQ8074-dts.patch
 # rm -rf target/linux/ipq807x/patches-5.4/997-device_tree_cmdline.patch
-rm -rf target/linux/ipq807x/patches-5.4/*.*
+# rm -rf target/linux/ipq807x/patches-5.4/*.*
