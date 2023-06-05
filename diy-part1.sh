@@ -92,6 +92,7 @@ svn export https://github.com/haiibo/packages/trunk/luci-app-onliner package/luc
 
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.36.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.6.1/192.168.36.1/g' package/base-files/files/bin/config_generate
 
 # TTYD 不指定接口，同时实现自动登录
 sed -i 's/option interface/#option interface/g' feeds/packages/utils/ttyd/files/ttyd.config
