@@ -20,9 +20,9 @@
 
 # 移除重复软件包
 # rm -rf package/luci-theme-argon
-rm -rf package/feeds/luci/luci-theme-argon
-#rm -rf package/feeds/kenzo/alist
-#rm -rf package/feeds/kenzo/luci-app-alist
+# rm -rf package/feeds/luci/luci-theme-argon
+# rm -rf package/feeds/kenzo/alist
+# rm -rf package/feeds/kenzo/luci-app-alist
 # rm -rf package/network/services/fullconenat
 # git clone -b main --single-branch https://github.com/lxz1104/openwrt-fullconenat package/network/services/fullconenat
 
