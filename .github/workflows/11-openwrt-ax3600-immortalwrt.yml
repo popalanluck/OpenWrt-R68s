@@ -216,12 +216,18 @@ jobs:
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
-                               ★  当前编译型号： Immortalwrt-Xiaomi-AX3600
-                               ★    此特制固件无法保证能用于正常刷机，仅供参考。     ★
-                         
-                         🍎  本固件已经集成istore应用商店,可安装istore内的大部分应用。🍎
-                         
-                        🎉     特别提醒：istoreX主题 需要在iStore应用商店内安装以后才能使用。     🎉 
+                             ★ 当前编译型号： Immortalwrt-Xiaomi-AX3600 ★
+                       ★       此特制固件无法保证能用于正常刷机，仅供参考。      ★
+                       
+                       🍎    首先用UBOOT刷immortalwrt-23.05-xiaomi_ax3600-stock-factory后，再用网页升级来刷入此固件。 🍎 
+                       🍎    预装的 istore应用商店无法使用 🍎  
+                       🍎    docker直接使用可能有故障（请将/opt/docker更改为通过cifs挂载的网络硬盘）🍎
+                 
+                           ***  自动在线编译---OpenWrt(immortalwrt固件)---For--Xiaomi-AX3600-K5.15  ***
+
+              ★ 源码 : https://github.com/immortalwrt/immortalwrt
+             ★ 分支 : openwrt-23.05
+             ★ 感谢源码作者无私分享！
                                    
                        ***  自动在线编译---OpenWrt(immortalwrt固件)---For--Xiaomi-AX3600  ***
         
@@ -235,7 +241,7 @@ jobs:
         
         🎉   编译版本：${{ env.DISTRIB_REVISION }}
         
-        🖥     管理地址：  192.168.6.1  
+        🖥     管理地址：  192.168.36.1  
         
         🌴    登录名称： root
         
@@ -248,7 +254,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }}【发布】-immortalwrt-Xiaomi-AX3600-K5.4 固件
+        name: ${{ steps.tag.outputs.release_date }}【发布】-immortalwrt-Xiaomi-AX3600-Stock-K5.15 固件
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
