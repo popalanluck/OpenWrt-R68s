@@ -11,12 +11,12 @@
 # =================================================================
 
 # 添加软件源
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 #echo 'src-git opentopd https://github.com/sirpdboy/sirpdboy-package' >>feeds.conf.default
 echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 
 # rm -rf target/linux/ipq807x
-svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-23.05/target/linux/ipq807x target/linux/ipq807x
+# svn export https://github.com/immortalwrt/immortalwrt/branches/openwrt-23.05/target/linux/ipq807x target/linux/ipq807x
 svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/config-5.4 target/linux/ipq807x/config-5.4
 svn export https://github.com/robimarko/openwrt/branches/AX3600/target/linux/ipq807x/patches-5.4 target/linux/ipq807x/patches-5.4
 # rm -rf target/linux/ipq807x/Makefile
@@ -31,8 +31,8 @@ sed -i 's/LINUX_KERNEL_HASH-5.4.203 = fc933f5b13066cfa54aacb5e86747a167bad1d8d23
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 # git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 
-# svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
-# svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/passwall2
+svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
+svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/passwall2
  git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 # git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
 
@@ -40,9 +40,9 @@ sed -i 's/LINUX_KERNEL_HASH-5.4.203 = fc933f5b13066cfa54aacb5e86747a167bad1d8d23
 git clone https://github.com/sbwml/fullconenat package/fullconenat
 git clone https://github.com/peter-tank/luci-app-fullconenat package/luci-app-fullconenat
 
-# svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-ssr-plus  package/luci-app-ssr-plus
-# svn export https://github.com/kiddin9/openwrt-packages/branches/master/lua-neturl package/lua-neturl
-# svn export https://github.com/kiddin9/openwrt-packages/branches/master/redsocks2 package/redsocks2
+svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-ssr-plus  package/luci-app-ssr-plus
+svn export https://github.com/kiddin9/openwrt-packages/branches/master/lua-neturl package/lua-neturl
+svn export https://github.com/kiddin9/openwrt-packages/branches/master/redsocks2 package/redsocks2
 svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-wan-mac package/luci-app-wan-mac
 
 # svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-theme-alpha package/luci-theme-alpha
@@ -59,19 +59,19 @@ ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/lu
 ./scripts/feeds install -a -f
 
 # 添加 istore应用商店
-echo >> feeds.conf.default
-echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
-./scripts/feeds update istore
-./scripts/feeds install -d y -p istore luci-app-store
+# echo >> feeds.conf.default
+# echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+# ./scripts/feeds update istore
+# ./scripts/feeds install -d y -p istore luci-app-store
 
 # nas-packages-luci
 
-echo >> feeds.conf.default
-echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
-echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
-./scripts/feeds update nas nas_luci
-./scripts/feeds install -a -p nas
-./scripts/feeds install -a -p nas_luci
+# echo >> feeds.conf.default
+# echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
+# echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
+# ./scripts/feeds update nas nas_luci
+# ./scripts/feeds install -a -p nas
+# ./scripts/feeds install -a -p nas_luci
 
 # x86 型号只显示 CPU 型号
 # sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
