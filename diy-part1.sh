@@ -32,7 +32,7 @@ sed -i 's/LINUX_KERNEL_HASH-5.4.203 = fc933f5b13066cfa54aacb5e86747a167bad1d8d23
 # git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall package/luci-app-passwall
-svn export https://github.com/xiaorouji/openwrt-passwall2/branches/main package/passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall2
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 # git clone https://github.com/sirpdboy/luci-app-partexp.git package/luci-app-partexp
 
@@ -47,6 +47,9 @@ svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-
 
 # svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-theme-alpha package/luci-theme-alpha
 
+./scripts/feeds update -a
+./scripts/feeds install -a -f
+
 # 添加 cpufreq
 svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq feeds/luci/applications/luci-app-cpufreq
 ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/luci-app-cpufreq
@@ -54,9 +57,6 @@ ln -sf ../../../feeds/luci/applications/luci-app-cpufreq ./package/feeds/luci/lu
 # 添加 alist
 # svn export https://github.com/kiddin9/openwrt-packages/branches/master/alist package/alist
 # svn export https://github.com/kiddin9/openwrt-packages/branches/master/luci-app-alist  package/luci-app-alist
-
-./scripts/feeds update -a
-./scripts/feeds install -a -f
 
 # 添加 istore应用商店
 # echo >> feeds.conf.default
