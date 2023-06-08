@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 11-immortalwrt-AX3600
+name: 11-02-immortalwrt-AX3600-stock-K5.15固件
 permissions: write-all
 on:
   repository_dispatch:
@@ -27,7 +27,7 @@ env:
   REPO_URL: https://github.com/popalanluck/immortalwrt
   REPO_BRANCH: openwrt-23.05
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: config/ax3600-immortalwrt.config
+  CONFIG_FILE: config/11-02-immortalwrt-ax3600-stock.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
@@ -216,14 +216,14 @@ jobs:
         echo "release_date=$(date +"%Y年%m月%d日%H时")" >> $GITHUB_OUTPUT
         touch release.txt
         echo "
-                             ★ 当前编译型号： Immortalwrt-Xiaomi-AX3600 ★
-                       ★       此特制固件无法保证能用于正常刷机，仅供参考。      ★
+                             ★ 当前编译型号： Immortalwrt-Xiaomi-AX3600-stock ★
+                       ★       此特制固件无法保证能用于正常刷机，仅供参考。仅适用于已经刷入第三方Uboot，并且刷入了大分区文件的小米AX3600.   ★
                        
                        🍎    首先用UBOOT刷immortalwrt-23.05-xiaomi_ax3600-stock-factory后，再用网页升级来刷入此固件。 🍎 
                        🍎    预装的 istore应用商店无法使用 🍎  
                        🍎    docker直接使用可能有故障（请将/opt/docker更改为通过cifs挂载的网络硬盘）🍎
                  
-                           ***  自动在线编译---OpenWrt(immortalwrt固件)---For--Xiaomi-AX3600-K5.15  ***
+                           ***  自动在线编译---OpenWrt(immortalwrt固件)---For--Xiaomi-AX3600-Stock-K5.15  ***
 
               ★ 源码 : https://github.com/immortalwrt/immortalwrt
              ★ 分支 : openwrt-23.05
