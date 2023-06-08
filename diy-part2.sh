@@ -37,6 +37,7 @@
 
 # Themes
 # git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/themes/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
 
 # 取消bootstrap为默认主题，将默认主题改为 argon
@@ -46,9 +47,9 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 
 
 # 修改配置
-sed -i "s|'enabled'|enabled|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
-sed -i "s|'model'|model|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
-sed -i "s|'wizard'|'router'|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
+# sed -i "s|'enabled'|enabled|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
+# sed -i "s|'model'|model|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
+# sed -i "s|'wizard'|'router'|g" package/feeds/nas_luci/luci-app-istorex/root/etc/config/istorex
 
 # Disable bridge firewalling by default
 echo '# Disable bridge firewalling by default' >>package/base-files/files/etc/sysctl.conf
@@ -64,6 +65,14 @@ sed -i 's/iptables=1/iptables=0/g' feeds/packages/utils/dockerd/files/etc/sysctl
 # sed -i "s|'enabled'|enabled|g" package/feeds/kiddin9/luci-app-istorex/root/etc/config/istorex
 # sed -i "s|'model'|model|g" package/feeds/kiddin9/luci-app-istorex/root/etc/config/istorex
 # sed -i "s|'wizard'|'router'|g" package/feeds/kiddin9/luci-app-istorex/root/etc/config/istorex
+
+sed -i "s|system.ntp.enable_server='0'|system.ntp.enable_server='1'|g" package/base-files/files/bin/config_generate
+sed -i "s|.hostname='ImmortalWrt'|.hostname='ImmortalWrt_AX3600_stock-By-Alan'|g" package/base-files/files/bin/config_generate
+sed -i "s|system.ntp.server='time1.apple.com'|system.ntp.server='ntp.ntsc.ac.cn'|g" package/base-files/files/bin/config_generate
+sed -i "s|system.ntp.server='time1.google.com'|system.ntp.server='ntp1.aliyun.com'|g" package/base-files/files/bin/config_generate
+sed -i "s|system.ntp.server='time.cloudflare.com'|system.ntp.server='ntp.tencent.com'|g" package/base-files/files/bin/config_generate
+sed -i "s|system.ntp.server='pool.ntp.org'|system.ntp.server='cn.ntp.org.cn'|g" package/base-files/files/bin/config_generate
+
 
 # 科学上网插件
 
